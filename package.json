@@ -1,0 +1,30 @@
+{
+  "name": "user_creation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "playwright.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "website": "playwright test tests/website/websiteFlow.spec.js --project=website",
+    "merchantDemo": "playwright test tests/merchant-demo/merchantDemo.spec.js --project=merchant-demo",
+    "test:createUser": "playwright test tests/merchantDemo.spec.js --project=merchant-demo",
+    "test:checkUser": "playwright test tests/adminVerification.spec.js --project=merchant-demo",
+    "test": "playwright test",
+    "headed": "playwright test --headed",
+    "debug": "playwright test --debug",
+    "report": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "allure-playwright": "^3.10.2"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}

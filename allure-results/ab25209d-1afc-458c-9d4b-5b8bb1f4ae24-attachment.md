@@ -1,0 +1,1850 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: tests/website/websiteFlow.spec.js >> Website EMI Purchase Flow
+- Location: tests/website/websiteFlow.spec.js:4:5
+
+# Error details
+
+```
+TimeoutError: page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://website.qa.snmt.link/", waiting until "load"
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - banner [ref=e5]:
+        - generic [ref=e6]:
+          - img "snapmint" [ref=e8] [cursor=pointer]
+          - generic [ref=e19]:
+            - img [ref=e20] [cursor=pointer]
+            - textbox "Search for TV, mobiles" [ref=e22]
+          - button "For Business" [ref=e23] [cursor=pointer]:
+            - img [ref=e25]
+            - generic [ref=e27]: For Business
+          - button "Pay EMI" [ref=e28] [cursor=pointer]:
+            - img [ref=e30]
+            - generic [ref=e32]: Pay EMI
+          - button "Sign Up" [ref=e34] [cursor=pointer]:
+            - generic [ref=e37]: Sign Up
+    - generic [ref=e42]:
+      - button [ref=e43] [cursor=pointer]:
+        - img [ref=e44]
+      - generic "Deals" [ref=e46]:
+        - button "Deals" [ref=e47] [cursor=pointer]:
+          - generic [ref=e48]: Deals
+      - generic "Mobile test" [ref=e50]:
+        - button "Mobile test" [ref=e51] [cursor=pointer]:
+          - generic [ref=e52]: Mobile test
+      - generic "TV,AC & Appliances_12" [ref=e54]:
+        - button "TV,AC & Appliances_12" [ref=e55] [cursor=pointer]:
+          - generic [ref=e56]: TV,AC & Appliances_12
+      - generic "Kitchen & Home Applicances_1" [ref=e58]:
+        - button "Kitchen & Home Applicances_1" [ref=e59] [cursor=pointer]:
+          - generic [ref=e60]: Kitchen & Home Applicances_1
+      - generic "Health & Wellness" [ref=e62]:
+        - button "Health & Wellness" [ref=e63] [cursor=pointer]:
+          - generic [ref=e64]: Health & Wellness
+      - generic "Fashion" [ref=e66]:
+        - button "Fashion" [ref=e67] [cursor=pointer]:
+          - generic [ref=e68]: Fashion
+      - generic "Sports & Fitness" [ref=e70]:
+        - button "Sports & Fitness" [ref=e71] [cursor=pointer]:
+          - generic [ref=e72]: Sports & Fitness
+      - generic "Mattresses & Pillows" [ref=e74]:
+        - button "Mattresses & Pillows" [ref=e75] [cursor=pointer]:
+          - generic [ref=e76]: Mattresses & Pillows
+    - main [ref=e78]:
+      - generic [ref=e79]:
+        - generic [ref=e82]:
+          - link "banner image" [ref=e84] [cursor=pointer]:
+            - /url: ""
+            - img "banner image" [ref=e86]
+          - link "banner image" [ref=e88] [cursor=pointer]:
+            - /url: /c/smart-phones-on-emi?category_master_slugs=smart-phones-on-emi
+            - img "banner image" [ref=e90]
+          - link "banner image" [ref=e92] [cursor=pointer]:
+            - /url: /c/smart-watches-on-emi
+            - img "banner image" [ref=e94]
+          - link "banner image" [ref=e96] [cursor=pointer]:
+            - /url: /deals
+            - img "banner image" [ref=e98]
+        - generic [ref=e104]:
+          - generic [ref=e107]:
+            - generic [ref=e108]:
+              - generic "Best Sellers0️⃣💳🛍️✨🔥💰🪙🏷️🎉📦⚡🛒💵📱🎯🚀🧾🛍️" [ref=e110]: Best Sellers0️⃣💳🛍️✨🔥💰...
+              - button "View All" [ref=e113] [cursor=pointer]:
+                - generic [ref=e115]: View All
+            - generic [ref=e116]:
+              - generic [ref=e118]: Pay with 3/6/9/12 month EMIs
+              - generic [ref=e119]:
+                - button "Previous slide" [ref=e120] [cursor=pointer]:
+                  - img [ref=e121]
+                - button "Next slide" [ref=e124] [cursor=pointer]:
+                  - img [ref=e125]
+            - generic [ref=e130]:
+              - generic [ref=e132]:
+                - generic [ref=e135] [cursor=pointer]:
+                  - generic [ref=e136]:
+                    - img [ref=e137]
+                    - generic [ref=e141]: 0% EMI
+                  - generic [ref=e142]:
+                    - generic [ref=e143]:
+                      - generic [ref=e144]:
+                        - generic [ref=e145]: ₹680
+                        - generic [ref=e146]: /mon
+                      - generic [ref=e148]: 14.3K+ sold
+                    - generic [ref=e150]: sk test product
+                    - generic [ref=e151]:
+                      - generic [ref=e152]: ₹2000
+                      - generic [ref=e153]: ₹4999
+                      - generic [ref=e155]: 60% off
+                - generic [ref=e158] [cursor=pointer]:
+                  - generic [ref=e159]:
+                    - img [ref=e160]
+                    - generic [ref=e164]: 0% EMI
+                  - generic [ref=e165]:
+                    - generic [ref=e166]:
+                      - generic [ref=e167]:
+                        - generic [ref=e168]: ₹817
+                        - generic [ref=e169]: /mon
+                      - generic [ref=e171]: 47K+ sold
+                    - generic [ref=e173]: Oneplus Nord Buds 2R In Ear Earbuds With Mic 12 4Mm Drivers Playback Upto 38Hr Case 4 Mic Design Ip55 Rating Misty Grey
+                    - generic [ref=e174]:
+                      - generic [ref=e175]: ₹2400
+                      - generic [ref=e176]: ₹3000
+                      - generic [ref=e178]: 20% off
+                - generic [ref=e181] [cursor=pointer]:
+                  - generic [ref=e182]:
+                    - img [ref=e183]
+                    - generic [ref=e187]: 0% EMI
+                  - generic [ref=e188]:
+                    - generic [ref=e189]:
+                      - generic [ref=e190]:
+                        - generic [ref=e191]: ₹521
+                        - generic [ref=e192]: /mon
+                      - generic [ref=e194]: 3.9K+ sold
+                    - generic [ref=e196]: test product
+                    - generic [ref=e197]:
+                      - generic [ref=e198]: ₹5519
+                      - generic [ref=e199]: ₹8499
+                      - generic [ref=e201]: 35% off
+                - generic [ref=e204] [cursor=pointer]:
+                  - generic [ref=e205]:
+                    - img [ref=e206]
+                    - generic [ref=e210]: 0% EMI
+                  - generic [ref=e211]:
+                    - generic [ref=e212]:
+                      - generic [ref=e213]:
+                        - generic [ref=e214]: ₹1259
+                        - generic [ref=e215]: /mon
+                      - generic [ref=e217]: 4.4K+ sold
+                    - generic [ref=e219]: test product
+                    - generic [ref=e220]:
+                      - generic [ref=e221]: ₹15500
+                      - generic [ref=e222]: ₹19999
+                      - generic [ref=e224]: 22% off
+              - generic [ref=e226]:
+                - generic [ref=e229] [cursor=pointer]:
+                  - generic [ref=e230]:
+                    - img [ref=e231]
+                    - generic [ref=e235]: 0% EMI
+                  - generic [ref=e236]:
+                    - generic [ref=e237]:
+                      - generic [ref=e238]:
+                        - generic [ref=e239]: ₹1256
+                        - generic [ref=e240]: /mon
+                      - generic [ref=e242]: 2.9K+ sold
+                    - generic [ref=e244]: test product
+                    - generic [ref=e245]:
+                      - generic [ref=e246]: ₹14002
+                      - generic [ref=e247]: ₹16998
+                      - generic [ref=e249]: 18% off
+                - generic [ref=e252] [cursor=pointer]:
+                  - generic [ref=e253]:
+                    - img [ref=e254]
+                    - generic [ref=e258]: 0% EMI
+                  - generic [ref=e259]:
+                    - generic [ref=e260]:
+                      - generic [ref=e261]:
+                        - generic [ref=e262]: ₹812
+                        - generic [ref=e263]: /mon
+                      - generic [ref=e265]: 1.2K+ sold
+                    - generic [ref=e267]: Salora 80 cm (32 inches) HD Ready Smart LED TV, SLV-4324 SFE (Black)
+                    - generic [ref=e268]:
+                      - generic [ref=e269]: ₹7599
+                      - generic [ref=e270]: ₹17500
+                      - generic [ref=e272]: 57% off
+                - generic [ref=e275] [cursor=pointer]:
+                  - generic [ref=e276]:
+                    - img [ref=e277]
+                    - generic [ref=e281]: 0% EMI
+                  - generic [ref=e282]:
+                    - generic [ref=e283]:
+                      - generic [ref=e284]:
+                        - generic [ref=e285]: ₹773
+                        - generic [ref=e286]: /mon
+                      - generic [ref=e288]: 2.4K+ sold
+                    - generic [ref=e290]: test product
+                    - generic [ref=e291]:
+                      - generic [ref=e292]: ₹7299
+                      - generic [ref=e293]: ₹8999
+                      - generic [ref=e295]: 19% off
+                - generic [ref=e298] [cursor=pointer]:
+                  - img [ref=e300]
+                  - generic [ref=e301]:
+                    - generic [ref=e302]:
+                      - generic [ref=e303]:
+                        - generic [ref=e304]: ₹791
+                        - generic [ref=e305]: /mon
+                      - generic [ref=e307]: 1.5K+ sold
+                    - generic [ref=e309]: Samsung Galaxy M05 (Mint Green, 4GB RAM, 64 GB Storage)
+                    - generic [ref=e310]:
+                      - generic [ref=e311]: ₹6999
+                      - generic [ref=e312]: ₹9999
+                      - generic [ref=e314]: 30% off
+              - generic [ref=e316]:
+                - generic [ref=e319] [cursor=pointer]:
+                  - img [ref=e321]
+                  - generic [ref=e322]:
+                    - generic [ref=e323]:
+                      - generic [ref=e324]:
+                        - generic [ref=e325]: ₹539
+                        - generic [ref=e326]: /mon
+                      - generic [ref=e328]: 880+ sold
+                    - generic [ref=e330]: Orient Electric Rapid Air Deco 1200MM High Speed Ceiling Fan (Soft Pearl)
+                    - generic [ref=e331]:
+                      - generic [ref=e332]: ₹1903
+                      - generic [ref=e333]: ₹2790
+                      - generic [ref=e335]: 32% off
+                - generic [ref=e338] [cursor=pointer]:
+                  - generic [ref=e339]:
+                    - img [ref=e340]
+                    - generic [ref=e344]: 0% EMI
+                  - generic [ref=e345]:
+                    - generic [ref=e346]:
+                      - generic [ref=e347]:
+                        - generic [ref=e348]: ₹1665
+                        - generic [ref=e349]: /mon
+                      - generic [ref=e351]: 2.1K+ sold
+                    - generic [ref=e353]: iQOO Z9s 5G (Onyx Green, 8GB RAM, 128GB Storage)
+                    - generic [ref=e354]:
+                      - generic [ref=e355]: ₹19999
+                      - generic [ref=e356]: ₹25999
+                      - generic [ref=e358]: 23% off
+          - generic [ref=e361]:
+            - generic [ref=e362]:
+              - generic "Checkout 0️⃣💳🛍️✨🔥💰🪙 Merchants 💙🛒💳✨0️⃣ EMI✨" [ref=e364]: Checkout 0️⃣💳🛍️✨🔥💰🪙 ...
+              - button "View All" [ref=e367] [cursor=pointer]:
+                - generic [ref=e369]: View All
+            - generic [ref=e370]:
+              - generic [ref=e372]: Rest in EMI
+              - generic [ref=e373]:
+                - button "Previous slide" [ref=e374] [cursor=pointer]:
+                  - img [ref=e375]
+                - button "Next slide" [ref=e378] [cursor=pointer]:
+                  - img [ref=e379]
+            - generic [ref=e384]:
+              - generic [ref=e386]:
+                - generic [ref=e389] [cursor=pointer]:
+                  - generic [ref=e390]:
+                    - img [ref=e391]
+                    - generic [ref=e395]: 0% EMI
+                  - generic [ref=e396]:
+                    - generic [ref=e398]:
+                      - generic [ref=e399]: ₹368
+                      - generic [ref=e400]: /mon
+                    - generic [ref=e402]: Women's Pink Cotton Blend Palazzos
+                    - generic [ref=e404]: ₹1299
+                - generic [ref=e407] [cursor=pointer]:
+                  - generic [ref=e408]:
+                    - img [ref=e409]
+                    - generic [ref=e413]: 0% EMI
+                  - generic [ref=e414]:
+                    - generic [ref=e415]:
+                      - generic [ref=e416]:
+                        - generic [ref=e417]: ₹441
+                        - generic [ref=e418]: /mon
+                      - generic [ref=e420]: 38.9K+ sold
+                    - generic [ref=e422]: boAt Rockerz 110 Wireless Earphone with 40H Playback, ASAP Charge, Dual Pairing, ENx Technology, BEAST Mode Active Black
+                    - generic [ref=e423]:
+                      - generic [ref=e424]: ₹699
+                      - generic [ref=e425]: ₹2490
+                      - generic [ref=e427]: 72% off
+                - generic [ref=e430] [cursor=pointer]:
+                  - generic [ref=e431]:
+                    - img [ref=e432]
+                    - generic [ref=e436]: 0% EMI
+                  - generic [ref=e437]:
+                    - generic [ref=e438]:
+                      - generic [ref=e439]:
+                        - generic [ref=e440]: ₹474
+                        - generic [ref=e441]: /mon
+                      - generic [ref=e443]: 430+ sold
+                    - generic [ref=e445]: Longway Super Dlx 750 W Mixer Grinder with 4 Jars (Powerful Motor with 1 Year warranty, Black & Gray)
+                    - generic [ref=e446]:
+                      - generic [ref=e447]: ₹1400
+                      - generic [ref=e448]: ₹1699
+                      - generic [ref=e450]: 18% off
+                - generic [ref=e453] [cursor=pointer]:
+                  - generic [ref=e454]:
+                    - img [ref=e455]
+                    - generic [ref=e459]: 0% EMI
+                  - generic [ref=e460]:
+                    - generic [ref=e461]:
+                      - generic [ref=e462]:
+                        - generic [ref=e463]: ₹199
+                        - generic [ref=e464]: /mon
+                      - generic [ref=e466]: 12.9K+ sold
+                    - generic [ref=e468]: Bombay Shaving Company Power Play Next Trimmer, Type C Charging, Long Battery Life, 6 Length Attachments | Trimmer For Men (Green)
+                    - generic [ref=e469]:
+                      - generic [ref=e470]: ₹599
+                      - generic [ref=e471]: ₹1000
+                      - generic [ref=e473]: 40% off
+              - generic [ref=e475]:
+                - generic [ref=e478] [cursor=pointer]:
+                  - generic [ref=e479]:
+                    - img [ref=e480]
+                    - generic [ref=e484]: 0% EMI
+                  - generic [ref=e485]:
+                    - generic [ref=e486]:
+                      - generic [ref=e487]:
+                        - generic [ref=e488]: ₹79
+                        - generic [ref=e489]: /mon
+                      - generic [ref=e491]: 640+ sold
+                    - generic [ref=e493]: Bombay Shaving Company Body Spray For Men, 150Ml Each (Pack Of 2) - Red Spice And Black Vibe
+                    - generic [ref=e494]:
+                      - generic [ref=e495]: ₹249
+                      - generic [ref=e496]: ₹710
+                      - generic [ref=e498]: 65% off
+                - generic [ref=e501] [cursor=pointer]:
+                  - generic [ref=e502]:
+                    - img [ref=e503]
+                    - generic [ref=e507]: 0% EMI
+                  - generic [ref=e508]:
+                    - generic [ref=e509]:
+                      - generic [ref=e510]:
+                        - generic [ref=e511]: ₹405
+                        - generic [ref=e512]: /mon
+                      - generic [ref=e514]: 2.2K+ sold
+                    - generic [ref=e516]: Swiss Military Electra MAG-DEE 10000 mAh Wireless Magnetic Power Bank
+                    - generic [ref=e517]:
+                      - generic [ref=e518]: ₹1199
+                      - generic [ref=e519]: ₹7499
+                      - generic [ref=e521]: 84% off
+          - generic [ref=e523]:
+            - generic [ref=e524]:
+              - generic [ref=e526]: Extra 10-30% OFF with Coupon
+              - button "View All" [ref=e528] [cursor=pointer]:
+                - generic [ref=e530]: View All
+            - generic [ref=e531]:
+              - generic [ref=e533]: Popular Stores with Snapmint
+              - generic [ref=e534]:
+                - button "Previous slide" [ref=e535] [cursor=pointer]:
+                  - img [ref=e536]
+                - button "Next slide" [ref=e539] [cursor=pointer]:
+                  - img [ref=e540]
+            - generic [ref=e546]:
+              - generic [ref=e548]:
+                - link "Home Banner Offer Home Banner PRICE RANGE ₹100-₹500 Visit site" [ref=e550] [cursor=pointer]:
+                  - /url: /
+                  - img "Home Banner" [ref=e552]
+                  - generic [ref=e554]: Offer
+                  - img "Home Banner" [ref=e556]
+                  - generic [ref=e557]:
+                    - generic [ref=e558]:
+                      - generic [ref=e559]: PRICE RANGE
+                      - generic [ref=e560]: ₹100-₹500
+                    - generic [ref=e561]:
+                      - generic [ref=e562]: Visit site
+                      - img [ref=e563]
+                - link "Home Banner Offer Home Banner PRICE RANGE ₹100-₹500 Visit site" [ref=e567] [cursor=pointer]:
+                  - /url: https://snapmint.com/stores/joker-and-witch-shopping-on-emi-aa1c2f6d-b081-42b2-b178-a13087a365d1
+                  - img "Home Banner" [ref=e569]
+                  - generic [ref=e571]: Offer
+                  - img "Home Banner" [ref=e573]
+                  - generic [ref=e574]:
+                    - generic [ref=e575]:
+                      - generic [ref=e576]: PRICE RANGE
+                      - generic [ref=e577]: ₹100-₹500
+                    - generic [ref=e578]:
+                      - generic [ref=e579]: Visit site
+                      - img [ref=e580]
+                - link "Home Banner Offer Home Banner PRICE RANGE ₹100-₹500 Visit site" [ref=e584] [cursor=pointer]:
+                  - /url: https://snapmint.com/stores/joker-and-witch-shopping-on-emi-aa1c2f6d-b081-42b2-b178-a13087a365d1
+                  - img "Home Banner" [ref=e586]
+                  - generic [ref=e588]: Offer
+                  - img "Home Banner" [ref=e590]
+                  - generic [ref=e591]:
+                    - generic [ref=e592]:
+                      - generic [ref=e593]: PRICE RANGE
+                      - generic [ref=e594]: ₹100-₹500
+                    - generic [ref=e595]:
+                      - generic [ref=e596]: Visit site
+                      - img [ref=e597]
+                - link "Home Banner Offer Home Banner PRICE RANGE ₹100-₹500 Visit site" [ref=e601] [cursor=pointer]:
+                  - /url: https://snapmint.com/stores/joker-and-witch-shopping-on-emi-aa1c2f6d-b081-42b2-b178-a13087a365d1
+                  - img "Home Banner" [ref=e603]
+                  - generic [ref=e605]: Offer
+                  - img "Home Banner" [ref=e607]
+                  - generic [ref=e608]:
+                    - generic [ref=e609]:
+                      - generic [ref=e610]: PRICE RANGE
+                      - generic [ref=e611]: ₹100-₹500
+                    - generic [ref=e612]:
+                      - generic [ref=e613]: Visit site
+                      - img [ref=e614]
+              - generic [ref=e618]:
+                - link "Home Banner Offer Home Banner PRICE RANGE ₹100-₹500 Visit site" [ref=e620] [cursor=pointer]:
+                  - /url: https://snapmint.com/stores/joker-and-witch-shopping-on-emi-aa1c2f6d-b081-42b2-b178-a13087a365d1
+                  - img "Home Banner" [ref=e622]
+                  - generic [ref=e624]: Offer
+                  - img "Home Banner" [ref=e626]
+                  - generic [ref=e627]:
+                    - generic [ref=e628]:
+                      - generic [ref=e629]: PRICE RANGE
+                      - generic [ref=e630]: ₹100-₹500
+                    - generic [ref=e631]:
+                      - generic [ref=e632]: Visit site
+                      - img [ref=e633]
+                - link "Home Banner Offer Home Banner PRICE RANGE ₹100-₹500 Visit site" [ref=e637] [cursor=pointer]:
+                  - /url: https://snapmint.com/stores/joker-and-witch-shopping-on-emi-aa1c2f6d-b081-42b2-b178-a13087a365d1
+                  - img "Home Banner" [ref=e639]
+                  - generic [ref=e641]: Offer
+                  - img "Home Banner" [ref=e643]
+                  - generic [ref=e644]:
+                    - generic [ref=e645]:
+                      - generic [ref=e646]: PRICE RANGE
+                      - generic [ref=e647]: ₹100-₹500
+                    - generic [ref=e648]:
+                      - generic [ref=e649]: Visit site
+                      - img [ref=e650]
+                - link "hgfghj bvcvbn hgfghj PRICE RANGE ₹100-₹200 Visit site" [ref=e654] [cursor=pointer]:
+                  - /url: /stores/emma-sleep-shopping-on-emi-faa16f5e-cf26-4f54-9778-e1a5f5590ea2
+                  - img "hgfghj" [ref=e656]
+                  - generic [ref=e658]: bvcvbn
+                  - img "hgfghj" [ref=e660]
+                  - generic [ref=e661]:
+                    - generic [ref=e662]:
+                      - generic [ref=e663]: PRICE RANGE
+                      - generic [ref=e664]: ₹100-₹200
+                    - generic [ref=e665]:
+                      - generic [ref=e666]: Visit site
+                      - img [ref=e667]
+                - link "AIA 2 again AIA data add same position SWEATSHIRTS.SHIRTS AIA 2 again AIA data add same position PRICE RANGE ₹5000-₹10000 Visit site" [ref=e671] [cursor=pointer]:
+                  - /url: https://campussutra.com/
+                  - img "AIA 2 again AIA data add same position" [ref=e673]
+                  - generic [ref=e675]: SWEATSHIRTS.SHIRTS
+                  - img "AIA 2 again AIA data add same position" [ref=e677]
+                  - generic [ref=e678]:
+                    - generic [ref=e679]:
+                      - generic [ref=e680]: PRICE RANGE
+                      - generic [ref=e681]: ₹5000-₹10000
+                    - generic [ref=e682]:
+                      - generic [ref=e683]: Visit site
+                      - img [ref=e684]
+              - generic [ref=e688]:
+                - link "AIA 1 With the rise of online shopping, many stores also sell products through websites and delivery apps, making shopping more convenient for customers SWEATSHIRTS.SHIRTS A store is a place where goods are sold to customers in exchange for money. It can be small, like a local grocery shop, or large AIA 1 With the rise of online shopping, many stores also sell products through websites and delivery apps, making shopping more convenient for customers PRICE RANGE ₹98 Visit site" [ref=e690] [cursor=pointer]:
+                  - /url: https://campussutra.com/
+                  - img "AIA 1 With the rise of online shopping, many stores also sell products through websites and delivery apps, making shopping more convenient for customers" [ref=e692]
+                  - generic [ref=e694]: SWEATSHIRTS.SHIRTS A store is a place where goods are sold to customers in exchange for money. It can be small, like a local grocery shop, or large
+                  - img "AIA 1 With the rise of online shopping, many stores also sell products through websites and delivery apps, making shopping more convenient for customers" [ref=e696]
+                  - generic [ref=e697]:
+                    - generic [ref=e698]:
+                      - generic [ref=e699]: PRICE RANGE
+                      - generic [ref=e700]: ₹98
+                    - generic [ref=e701]:
+                      - generic [ref=e702]: Visit site
+                      - img [ref=e703]
+                - link "Bear House Image SWEATSHIRTS.SHIRTS Bear House Image PRICE RANGE ₹300-₹500 Visit site" [ref=e707] [cursor=pointer]:
+                  - /url: https://campussutra.com/
+                  - img "Bear House Image" [ref=e709]
+                  - generic [ref=e711]: SWEATSHIRTS.SHIRTS
+                  - img "Bear House Image" [ref=e713]
+                  - generic [ref=e714]:
+                    - generic [ref=e715]:
+                      - generic [ref=e716]: PRICE RANGE
+                      - generic [ref=e717]: ₹300-₹500
+                    - generic [ref=e718]:
+                      - generic [ref=e719]: Visit site
+                      - img [ref=e720]
+                - link "AIA 3 SWEATSHIRTS.SHIRTS AIA 3 PRICE RANGE ₹600-₹1000 Visit site" [ref=e724] [cursor=pointer]:
+                  - /url: https://qa.snapmint.com/stores/amazon-shopping-on-emi-94ecf7b4-bee2-4bab-a578-fe8a44255a31
+                  - img "AIA 3" [ref=e726]
+                  - generic [ref=e728]: SWEATSHIRTS.SHIRTS
+                  - img "AIA 3" [ref=e730]
+                  - generic [ref=e731]:
+                    - generic [ref=e732]:
+                      - generic [ref=e733]: PRICE RANGE
+                      - generic [ref=e734]: ₹600-₹1000
+                    - generic [ref=e735]:
+                      - generic [ref=e736]: Visit site
+                      - img [ref=e737]
+                - link "AIA 4 SWEATSHIRTS.SHIRTS AIA 4 PRICE RANGE ₹200-₹500 Visit site" [ref=e741] [cursor=pointer]:
+                  - /url: https://campussutra.com/
+                  - img "AIA 4" [ref=e743]
+                  - generic [ref=e745]: SWEATSHIRTS.SHIRTS
+                  - img "AIA 4" [ref=e747]
+                  - generic [ref=e748]:
+                    - generic [ref=e749]:
+                      - generic [ref=e750]: PRICE RANGE
+                      - generic [ref=e751]: ₹200-₹500
+                    - generic [ref=e752]:
+                      - generic [ref=e753]: Visit site
+                      - img [ref=e754]
+              - link "AIA 5 SWEATSHIRTS.SHIRTS AIA 5 PRICE RANGE ₹500-₹1000 Visit site" [ref=e760] [cursor=pointer]:
+                - /url: https://snapmint.com/stores/bombay-shaving-company-shopping-on-emi-a3d678b0-1cc1-4559-aba5-db5c6cd6ed64
+                - img "AIA 5" [ref=e762]
+                - generic [ref=e764]: SWEATSHIRTS.SHIRTS
+                - img "AIA 5" [ref=e766]
+                - generic [ref=e767]:
+                  - generic [ref=e768]:
+                    - generic [ref=e769]: PRICE RANGE
+                    - generic [ref=e770]: ₹500-₹1000
+                  - generic [ref=e771]:
+                    - generic [ref=e772]: Visit site
+                    - img [ref=e773]
+          - generic [ref=e783]:
+            - generic [ref=e784]:
+              - generic [ref=e785]: Credit Card Not Required
+              - generic [ref=e786]: Login & Know Your Credit Limit
+            - button "Login" [ref=e788] [cursor=pointer]:
+              - generic [ref=e791]: Login
+        - generic [ref=e793]:
+          - generic [ref=e798]: Top Brands - Buy directly from us
+          - generic [ref=e799]:
+            - link "Home Banner Home Banner Offer Home Banner PRICE RANGE ₹100-₹500" [ref=e800] [cursor=pointer]:
+              - /url: https://snapmint.com/stores/joker-and-witch-shopping-on-emi-aa1c2f6d-b081-42b2-b178-a13087a365d1
+              - img "Home Banner" [ref=e802]
+              - generic [ref=e803]:
+                - generic [ref=e804]: Home Banner
+                - generic [ref=e806]: Offer
+              - img "Home Banner" [ref=e808]
+              - generic [ref=e810]:
+                - generic [ref=e811]: PRICE RANGE
+                - generic [ref=e812]: ₹100-₹500
+            - link "Home Banner Home Banner Offer Home Banner PRICE RANGE ₹100-₹500" [ref=e813] [cursor=pointer]:
+              - /url: https://snapmint.com/stores/joker-and-witch-shopping-on-emi-aa1c2f6d-b081-42b2-b178-a13087a365d1
+              - img "Home Banner" [ref=e815]
+              - generic [ref=e816]:
+                - generic [ref=e817]: Home Banner
+                - generic [ref=e819]: Offer
+              - img "Home Banner" [ref=e821]
+              - generic [ref=e823]:
+                - generic [ref=e824]: PRICE RANGE
+                - generic [ref=e825]: ₹100-₹500
+            - link "Home Banner Home Banner Offer Home Banner PRICE RANGE ₹100-₹500" [ref=e826] [cursor=pointer]:
+              - /url: https://snapmint.com/stores/joker-and-witch-shopping-on-emi-aa1c2f6d-b081-42b2-b178-a13087a365d1
+              - img "Home Banner" [ref=e828]
+              - generic [ref=e829]:
+                - generic [ref=e830]: Home Banner
+                - generic [ref=e832]: Offer
+              - img "Home Banner" [ref=e834]
+              - generic [ref=e836]:
+                - generic [ref=e837]: PRICE RANGE
+                - generic [ref=e838]: ₹100-₹500
+            - link "Home Banner Home Banner Offer Home Banner PRICE RANGE ₹100-₹500" [ref=e839] [cursor=pointer]:
+              - /url: https://snapmint.com/stores/joker-and-witch-shopping-on-emi-aa1c2f6d-b081-42b2-b178-a13087a365d1
+              - img "Home Banner" [ref=e841]
+              - generic [ref=e842]:
+                - generic [ref=e843]: Home Banner
+                - generic [ref=e845]: Offer
+              - img "Home Banner" [ref=e847]
+              - generic [ref=e849]:
+                - generic [ref=e850]: PRICE RANGE
+                - generic [ref=e851]: ₹100-₹500
+            - link "Testing Testing SWEATSHIRTS.SHIRTS Testing PRICE RANGE ₹10-₹1000" [ref=e852] [cursor=pointer]:
+              - /url: /
+              - img "Testing" [ref=e854]
+              - generic [ref=e855]:
+                - generic [ref=e856]: Testing
+                - generic [ref=e858]: SWEATSHIRTS.SHIRTS
+              - img "Testing" [ref=e860]
+              - generic [ref=e862]:
+                - generic [ref=e863]: PRICE RANGE
+                - generic [ref=e864]: ₹10-₹1000
+            - link "SIS 1 SIS 1 SWEATSHIRTS.SHIRTS SIS 1 PRICE RANGE ₹500-₹1000" [ref=e865] [cursor=pointer]:
+              - /url: https://snapmint.com/stores/bombay-shaving-company-shopping-on-emi-a3d678b0-1cc1-4559-aba5-db5c6cd6ed64
+              - img "SIS 1" [ref=e867]
+              - generic [ref=e868]:
+                - generic [ref=e869]: SIS 1
+                - generic [ref=e871]: SWEATSHIRTS.SHIRTS
+              - img "SIS 1" [ref=e873]
+              - generic [ref=e875]:
+                - generic [ref=e876]: PRICE RANGE
+                - generic [ref=e877]: ₹500-₹1000
+            - link "SIS • SIS SIS • SIS SWEATSHIRTS • SHIRTS SIS • SIS PRICE RANGE ₹125-₹500" [ref=e878] [cursor=pointer]:
+              - /url: /
+              - img "SIS • SIS" [ref=e880]
+              - generic [ref=e881]:
+                - generic [ref=e882]: SIS • SIS
+                - generic [ref=e884]: SWEATSHIRTS • SHIRTS
+              - img "SIS • SIS" [ref=e886]
+              - generic [ref=e888]:
+                - generic [ref=e889]: PRICE RANGE
+                - generic [ref=e890]: ₹125-₹500
+            - link "SIS.TEST SIS.TEST SIS.TEST SIS.TEST" [ref=e891] [cursor=pointer]:
+              - /url: https://snapmint.com/stores/bombay-shaving-company-shopping-on-emi-a3d678b0-1cc1-4559-aba5-db5c6cd6ed64
+              - img "SIS.TEST" [ref=e893]
+              - generic [ref=e894]:
+                - generic [ref=e895]: SIS.TEST
+                - generic [ref=e897]: SIS.TEST
+              - img "SIS.TEST" [ref=e899]
+            - link "asdadsfd asdadsfd sadsfdsfgd asdadsfd PRICE RANGE ₹400-₹500" [ref=e900] [cursor=pointer]:
+              - /url: /
+              - img "asdadsfd" [ref=e902]
+              - generic [ref=e903]:
+                - generic [ref=e904]: asdadsfd
+                - generic [ref=e906]: sadsfdsfgd
+              - img "asdadsfd" [ref=e908]
+              - generic [ref=e910]:
+                - generic [ref=e911]: PRICE RANGE
+                - generic [ref=e912]: ₹400-₹500
+        - generic [ref=e915]:
+          - generic [ref=e916]:
+            - generic [ref=e918]: Best Sellers0️⃣💳🛍️✨🔥💰🪙🏷️🎉📦⚡🛒💵📱🎯🚀🧾🛍️
+            - button "View All" [ref=e920] [cursor=pointer]:
+              - generic [ref=e922]: View All
+          - generic [ref=e923]:
+            - generic [ref=e926] [cursor=pointer]:
+              - generic [ref=e927]:
+                - img [ref=e928]
+                - generic [ref=e932]: 0% EMI
+              - generic [ref=e933]:
+                - generic [ref=e934]:
+                  - generic [ref=e935]:
+                    - generic [ref=e936]: ₹680
+                    - generic [ref=e937]: /mon
+                  - generic [ref=e939]: 14.3K+ sold
+                - generic [ref=e941]: sk test product
+                - generic [ref=e942]:
+                  - generic [ref=e943]: ₹2000
+                  - generic [ref=e944]: ₹4999
+                  - generic [ref=e946]: 60% off
+            - generic [ref=e949] [cursor=pointer]:
+              - generic [ref=e950]:
+                - img [ref=e951]
+                - generic [ref=e955]: 0% EMI
+              - generic [ref=e956]:
+                - generic [ref=e957]:
+                  - generic [ref=e958]:
+                    - generic [ref=e959]: ₹817
+                    - generic [ref=e960]: /mon
+                  - generic [ref=e962]: 47K+ sold
+                - generic [ref=e964]: Oneplus Nord Buds 2R In Ear Earbuds With Mic 12 4Mm Drivers Playback Upto 38Hr Case 4 Mic Design Ip55 Rating Misty Grey
+                - generic [ref=e965]:
+                  - generic [ref=e966]: ₹2400
+                  - generic [ref=e967]: ₹3000
+                  - generic [ref=e969]: 20% off
+            - generic [ref=e972] [cursor=pointer]:
+              - generic [ref=e973]:
+                - img [ref=e974]
+                - generic [ref=e978]: 0% EMI
+              - generic [ref=e979]:
+                - generic [ref=e980]:
+                  - generic [ref=e981]:
+                    - generic [ref=e982]: ₹521
+                    - generic [ref=e983]: /mon
+                  - generic [ref=e985]: 3.9K+ sold
+                - generic [ref=e987]: test product
+                - generic [ref=e988]:
+                  - generic [ref=e989]: ₹5519
+                  - generic [ref=e990]: ₹8499
+                  - generic [ref=e992]: 35% off
+            - generic [ref=e995] [cursor=pointer]:
+              - generic [ref=e996]:
+                - img [ref=e997]
+                - generic [ref=e1001]: 0% EMI
+              - generic [ref=e1002]:
+                - generic [ref=e1003]:
+                  - generic [ref=e1004]:
+                    - generic [ref=e1005]: ₹1259
+                    - generic [ref=e1006]: /mon
+                  - generic [ref=e1008]: 4.4K+ sold
+                - generic [ref=e1010]: test product
+                - generic [ref=e1011]:
+                  - generic [ref=e1012]: ₹15500
+                  - generic [ref=e1013]: ₹19999
+                  - generic [ref=e1015]: 22% off
+            - generic [ref=e1018] [cursor=pointer]:
+              - generic [ref=e1019]:
+                - img [ref=e1020]
+                - generic [ref=e1024]: 0% EMI
+              - generic [ref=e1025]:
+                - generic [ref=e1026]:
+                  - generic [ref=e1027]:
+                    - generic [ref=e1028]: ₹1256
+                    - generic [ref=e1029]: /mon
+                  - generic [ref=e1031]: 2.9K+ sold
+                - generic [ref=e1033]: test product
+                - generic [ref=e1034]:
+                  - generic [ref=e1035]: ₹14002
+                  - generic [ref=e1036]: ₹16998
+                  - generic [ref=e1038]: 18% off
+            - generic [ref=e1041] [cursor=pointer]:
+              - generic [ref=e1042]:
+                - img [ref=e1043]
+                - generic [ref=e1047]: 0% EMI
+              - generic [ref=e1048]:
+                - generic [ref=e1049]:
+                  - generic [ref=e1050]:
+                    - generic [ref=e1051]: ₹812
+                    - generic [ref=e1052]: /mon
+                  - generic [ref=e1054]: 1.2K+ sold
+                - generic [ref=e1056]: Salora 80 cm (32 inches) HD Ready Smart LED TV, SLV-4324 SFE (Black)
+                - generic [ref=e1057]:
+                  - generic [ref=e1058]: ₹7599
+                  - generic [ref=e1059]: ₹17500
+                  - generic [ref=e1061]: 57% off
+            - generic [ref=e1064] [cursor=pointer]:
+              - generic [ref=e1065]:
+                - img [ref=e1066]
+                - generic [ref=e1070]: 0% EMI
+              - generic [ref=e1071]:
+                - generic [ref=e1072]:
+                  - generic [ref=e1073]:
+                    - generic [ref=e1074]: ₹773
+                    - generic [ref=e1075]: /mon
+                  - generic [ref=e1077]: 2.4K+ sold
+                - generic [ref=e1079]: test product
+                - generic [ref=e1080]:
+                  - generic [ref=e1081]: ₹7299
+                  - generic [ref=e1082]: ₹8999
+                  - generic [ref=e1084]: 19% off
+            - generic [ref=e1087] [cursor=pointer]:
+              - img [ref=e1089]
+              - generic [ref=e1090]:
+                - generic [ref=e1091]:
+                  - generic [ref=e1092]:
+                    - generic [ref=e1093]: ₹791
+                    - generic [ref=e1094]: /mon
+                  - generic [ref=e1096]: 1.5K+ sold
+                - generic [ref=e1098]: Samsung Galaxy M05 (Mint Green, 4GB RAM, 64 GB Storage)
+                - generic [ref=e1099]:
+                  - generic [ref=e1100]: ₹6999
+                  - generic [ref=e1101]: ₹9999
+                  - generic [ref=e1103]: 30% off
+            - generic [ref=e1106] [cursor=pointer]:
+              - img [ref=e1108]
+              - generic [ref=e1109]:
+                - generic [ref=e1110]:
+                  - generic [ref=e1111]:
+                    - generic [ref=e1112]: ₹539
+                    - generic [ref=e1113]: /mon
+                  - generic [ref=e1115]: 880+ sold
+                - generic [ref=e1117]: Orient Electric Rapid Air Deco 1200MM High Speed Ceiling Fan (Soft Pearl)
+                - generic [ref=e1118]:
+                  - generic [ref=e1119]: ₹1903
+                  - generic [ref=e1120]: ₹2790
+                  - generic [ref=e1122]: 32% off
+            - generic [ref=e1125] [cursor=pointer]:
+              - generic [ref=e1126]:
+                - img [ref=e1127]
+                - generic [ref=e1131]: 0% EMI
+              - generic [ref=e1132]:
+                - generic [ref=e1133]:
+                  - generic [ref=e1134]:
+                    - generic [ref=e1135]: ₹1665
+                    - generic [ref=e1136]: /mon
+                  - generic [ref=e1138]: 2.1K+ sold
+                - generic [ref=e1140]: iQOO Z9s 5G (Onyx Green, 8GB RAM, 128GB Storage)
+                - generic [ref=e1141]:
+                  - generic [ref=e1142]: ₹19999
+                  - generic [ref=e1143]: ₹25999
+                  - generic [ref=e1145]: 23% off
+        - generic [ref=e1148]:
+          - generic [ref=e1149]:
+            - generic [ref=e1151]: Checkout 0️⃣💳🛍️✨🔥💰🪙 Merchants 💙🛒💳✨0️⃣ EMI✨
+            - button "View All" [ref=e1153] [cursor=pointer]:
+              - generic [ref=e1155]: View All
+          - generic [ref=e1156]:
+            - link "0% EMI Starting ₹368 /mon" [ref=e1159] [cursor=pointer]:
+              - /url: https://website.qa.snmt.link/c/163?category_master_slug=163&brand_master_slug=884?source=home
+              - generic [ref=e1160]:
+                - generic [ref=e1161]:
+                  - img [ref=e1162]
+                  - generic [ref=e1166]: 0% EMI
+                - generic [ref=e1169]:
+                  - generic [ref=e1171]: Starting
+                  - generic [ref=e1172]:
+                    - generic [ref=e1173]: ₹368
+                    - generic [ref=e1174]: /mon
+            - link "0% EMI Starting ₹441 /mon" [ref=e1177] [cursor=pointer]:
+              - /url: https://website.qa.snmt.link/c/297?category_master_slug=297&brand_master_slug=30?source=home
+              - generic [ref=e1178]:
+                - generic [ref=e1179]:
+                  - img [ref=e1180]
+                  - generic [ref=e1184]: 0% EMI
+                - generic [ref=e1187]:
+                  - generic [ref=e1189]: Starting
+                  - generic [ref=e1190]:
+                    - generic [ref=e1191]: ₹441
+                    - generic [ref=e1192]: /mon
+            - link "0% EMI Starting ₹474 /mon" [ref=e1195] [cursor=pointer]:
+              - /url: https://website.qa.snmt.link/c/32?category_master_slug=32&brand_master_slug=1395?source=home
+              - generic [ref=e1196]:
+                - generic [ref=e1197]:
+                  - img [ref=e1198]
+                  - generic [ref=e1202]: 0% EMI
+                - generic [ref=e1205]:
+                  - generic [ref=e1207]: Starting
+                  - generic [ref=e1208]:
+                    - generic [ref=e1209]: ₹474
+                    - generic [ref=e1210]: /mon
+            - link "0% EMI Starting ₹199 /mon" [ref=e1213] [cursor=pointer]:
+              - /url: https://website.qa.snmt.link/c/78?category_master_slug=78&brand_master_slug=1335?source=home
+              - generic [ref=e1214]:
+                - generic [ref=e1215]:
+                  - img [ref=e1216]
+                  - generic [ref=e1220]: 0% EMI
+                - generic [ref=e1223]:
+                  - generic [ref=e1225]: Starting
+                  - generic [ref=e1226]:
+                    - generic [ref=e1227]: ₹199
+                    - generic [ref=e1228]: /mon
+            - link "0% EMI Starting ₹79 /mon" [ref=e1231] [cursor=pointer]:
+              - /url: https://website.qa.snmt.link/c/316?category_master_slug=316&brand_master_slug=1335?source=home
+              - generic [ref=e1232]:
+                - generic [ref=e1233]:
+                  - img [ref=e1234]
+                  - generic [ref=e1238]: 0% EMI
+                - generic [ref=e1241]:
+                  - generic [ref=e1243]: Starting
+                  - generic [ref=e1244]:
+                    - generic [ref=e1245]: ₹79
+                    - generic [ref=e1246]: /mon
+            - link "0% EMI Starting ₹405 /mon" [ref=e1249] [cursor=pointer]:
+              - /url: https://website.qa.snmt.link/c/65?category_master_slug=65&brand_master_slug=1047?source=home
+              - generic [ref=e1250]:
+                - generic [ref=e1251]:
+                  - img [ref=e1252]
+                  - generic [ref=e1256]: 0% EMI
+                - generic [ref=e1259]:
+                  - generic [ref=e1261]: Starting
+                  - generic [ref=e1262]:
+                    - generic [ref=e1263]: ₹405
+                    - generic [ref=e1264]: /mon
+        - generic [ref=e1267]:
+          - generic [ref=e1268]:
+            - generic [ref=e1270]: "Deals: Pay Only ₹190️⃣💳🛍️✨🔥💰🪙🏷️🎉📦⚡🛒💵📱🎯🚀🧾"
+            - button "View All" [ref=e1272] [cursor=pointer]:
+              - generic [ref=e1274]: View All
+          - generic [ref=e1275]:
+            - generic [ref=e1278] [cursor=pointer]:
+              - generic [ref=e1279]:
+                - img [ref=e1280]
+                - generic [ref=e1284]: 0% EMI
+              - generic [ref=e1285]:
+                - generic [ref=e1286]:
+                  - generic [ref=e1287]:
+                    - generic [ref=e1288]: ₹405
+                    - generic [ref=e1289]: /mon
+                  - generic [ref=e1291]: 25.8K+ sold
+                - generic [ref=e1293]: Noise Colorfit Icon Buzz Jet Black (Bluetooth Calling Smart Watch with Voice Assistance, 1.69" Display, Built-in Games, Sleep, Spo2, HR Monitors)
+                - generic [ref=e1294]:
+                  - generic [ref=e1295]: ₹1199
+                  - generic [ref=e1296]: ₹49999
+                  - generic [ref=e1298]: 98% off
+            - generic [ref=e1301] [cursor=pointer]:
+              - generic [ref=e1302]:
+                - img [ref=e1303]
+                - generic [ref=e1307]: 0% EMI
+              - generic [ref=e1308]:
+                - generic [ref=e1309]:
+                  - generic [ref=e1310]:
+                    - generic [ref=e1311]: ₹782
+                    - generic [ref=e1312]: /mon
+                  - generic [ref=e1314]: 34.7K+ sold
+                - generic [ref=e1316]: boAt Airdopes 131 Truly Wireless Bluetooth In Ear Earbuds With Mic Black
+                - generic [ref=e1317]:
+                  - generic [ref=e1318]: ₹4599
+                  - generic [ref=e1319]: ₹39990
+                  - generic [ref=e1321]: 88% off
+            - generic [ref=e1324] [cursor=pointer]:
+              - generic [ref=e1325]:
+                - generic [ref=e1327]:
+                  - img [ref=e1329]
+                  - img "Crazy Deal" [ref=e1330]
+                - img [ref=e1331]
+                - generic [ref=e1335]: 0% EMI
+              - generic [ref=e1336]:
+                - generic [ref=e1337]:
+                  - generic [ref=e1338]:
+                    - generic [ref=e1339]: ₹611
+                    - generic [ref=e1340]: /mon
+                  - generic [ref=e1342]: 47K+ sold
+                - generic [ref=e1344]: Oneplus Nord Buds 2R In Ear Earbuds With Mic 12 4Mm Drivers Playback Upto 38Hr Case 4 Mic Design Ip55 Rating Deep Grey(test SOMOS feed)
+                - generic [ref=e1345]:
+                  - generic [ref=e1346]: ₹1799
+                  - generic [ref=e1347]: ₹2299
+                  - generic [ref=e1349]: 22% off
+            - generic [ref=e1352] [cursor=pointer]:
+              - generic [ref=e1353]:
+                - img [ref=e1354]
+                - generic [ref=e1358]: 0% EMI
+              - generic [ref=e1359]:
+                - generic [ref=e1360]:
+                  - generic [ref=e1361]:
+                    - generic [ref=e1362]: ₹508
+                    - generic [ref=e1363]: /mon
+                  - generic [ref=e1365]: 15.1K+ sold
+                - generic [ref=e1367]: boAt Energyshroom PB400 Powerbank with 20000mAh battery capacity with Smart IC protection (Steel Blue)
+                - generic [ref=e1368]:
+                  - generic [ref=e1369]: ₹1499
+                  - generic [ref=e1370]: ₹4499
+                  - generic [ref=e1372]: 67% off
+            - generic [ref=e1375] [cursor=pointer]:
+              - generic [ref=e1376]:
+                - img [ref=e1377]
+                - generic [ref=e1381]: 0% EMI
+              - generic [ref=e1382]:
+                - generic [ref=e1383]:
+                  - generic [ref=e1384]:
+                    - generic [ref=e1385]: ₹765
+                    - generic [ref=e1386]: /mon
+                  - generic [ref=e1388]: 4.5K+ sold
+                - generic [ref=e1390]: Realme Buds T300 Truly Wireless In Ear Earbuds With 30Db Anc Youth White
+                - generic [ref=e1391]:
+                  - generic [ref=e1392]: ₹2249
+                  - generic [ref=e1393]: ₹3999
+                  - generic [ref=e1395]: 44% off
+            - generic [ref=e1398] [cursor=pointer]:
+              - generic [ref=e1399]:
+                - img [ref=e1400]
+                - generic [ref=e1404]: 0% EMI
+              - generic [ref=e1405]:
+                - generic [ref=e1406]:
+                  - generic [ref=e1407]:
+                    - generic [ref=e1408]: ₹268
+                    - generic [ref=e1409]: /mon
+                  - generic [ref=e1411]: 47.4K+ sold
+                - generic [ref=e1413]: boAt Airdopes Alpha Earbuds With 35Hrs Playback 13Mm Drivers Enx Tech Asap Charge Iwp Technology Jet Black
+                - generic [ref=e1414]:
+                  - generic [ref=e1415]: ₹799
+                  - generic [ref=e1416]: ₹3490
+                  - generic [ref=e1418]: 77% off
+            - generic [ref=e1421] [cursor=pointer]:
+              - generic [ref=e1422]:
+                - img [ref=e1423]
+                - generic [ref=e1427]: 0% EMI
+              - generic [ref=e1428]:
+                - generic [ref=e1429]:
+                  - generic [ref=e1430]:
+                    - generic [ref=e1431]: ₹370
+                    - generic [ref=e1432]: /mon
+                  - generic [ref=e1434]: 9.9K+ sold
+                - generic [ref=e1436]: boAt Airdopes Supreme Wireless Earbuds with 50 Hours Playback, AI ENx with Wind Noise Reduction, Cinematic Spatial Audio (Classic Black)
+                - generic [ref=e1437]:
+                  - generic [ref=e1438]: ₹1099
+                  - generic [ref=e1439]: ₹5990
+                  - generic [ref=e1441]: 82% off
+            - generic [ref=e1444] [cursor=pointer]:
+              - generic [ref=e1445]:
+                - img [ref=e1446]
+                - generic [ref=e1450]: 0% EMI
+              - generic [ref=e1451]:
+                - generic [ref=e1452]:
+                  - generic [ref=e1453]:
+                    - generic [ref=e1454]: ₹440
+                    - generic [ref=e1455]: /mon
+                  - generic [ref=e1457]: 8.5K+ sold
+                - generic [ref=e1459]: Noise Buds N1 Truly Wireless Earbuds Up to 40 hours of playtime, 11mm driver, Quad mic with ENC, Ultra low latency, Hyper Sync (Carbon Black)
+                - generic [ref=e1460]:
+                  - generic [ref=e1461]: ₹1299
+                  - generic [ref=e1462]: ₹3499
+                  - generic [ref=e1464]: 63% off
+            - generic [ref=e1467] [cursor=pointer]:
+              - generic [ref=e1468]:
+                - img [ref=e1469]
+                - generic [ref=e1473]: 0% EMI
+              - generic [ref=e1474]:
+                - generic [ref=e1475]:
+                  - generic [ref=e1476]:
+                    - generic [ref=e1477]: ₹440
+                    - generic [ref=e1478]: /mon
+                  - generic [ref=e1480]: 8.5K+ sold
+                - generic [ref=e1482]: Noise Buds N1 Truly Wireless Earbuds Up to 40 hours of playtime, 11mm driver, Quad mic with ENC, Ultra low latency, Hyper Sync (Forest Green)
+                - generic [ref=e1483]:
+                  - generic [ref=e1484]: ₹1299
+                  - generic [ref=e1485]: ₹3499
+                  - generic [ref=e1487]: 63% off
+            - generic [ref=e1490] [cursor=pointer]:
+              - generic [ref=e1491]:
+                - img [ref=e1492]
+                - generic [ref=e1496]: 0% EMI
+              - generic [ref=e1497]:
+                - generic [ref=e1498]:
+                  - generic [ref=e1499]:
+                    - generic [ref=e1500]: ₹440
+                    - generic [ref=e1501]: /mon
+                  - generic [ref=e1503]: 1.8K+ sold
+                - generic [ref=e1505]: boAt Airdopes 141Anc Wireless Earbuds With Active Noise Cancellation Up To 32Db 42H Playback Beast Mode Gunmetal Black
+                - generic [ref=e1506]:
+                  - generic [ref=e1507]: ₹1299
+                  - generic [ref=e1508]: ₹5990
+                  - generic [ref=e1510]: 78% off
+        - generic [ref=e1513]:
+          - generic [ref=e1514]:
+            - generic [ref=e1516]: 49 dp💳✨0️⃣ EMI✨💳🛒
+            - button "View All" [ref=e1518] [cursor=pointer]:
+              - generic [ref=e1520]: View All
+          - generic [ref=e1521]:
+            - link "0% EMI Starting ₹165 /mon" [ref=e1524] [cursor=pointer]:
+              - /url: https://website.qa.snmt.link/c/297?category_master_slug=297&brand_master_slug=1089?source=home
+              - generic [ref=e1525]:
+                - generic [ref=e1526]:
+                  - img [ref=e1527]
+                  - generic [ref=e1531]: 0% EMI
+                - generic [ref=e1534]:
+                  - generic [ref=e1536]: Starting
+                  - generic [ref=e1537]:
+                    - generic [ref=e1538]: ₹165
+                    - generic [ref=e1539]: /mon
+            - link "0% EMI Starting ₹234 /mon" [ref=e1542] [cursor=pointer]:
+              - /url: https://website.qa.snmt.link/c/4?category_master_slug=4&brand_master_slug=1089?source=home
+              - generic [ref=e1543]:
+                - generic [ref=e1544]:
+                  - img [ref=e1545]
+                  - generic [ref=e1549]: 0% EMI
+                - generic [ref=e1552]:
+                  - generic [ref=e1554]: Starting
+                  - generic [ref=e1555]:
+                    - generic [ref=e1556]: ₹234
+                    - generic [ref=e1557]: /mon
+            - link "0% EMI Starting ₹337 /mon" [ref=e1560] [cursor=pointer]:
+              - /url: https://website.qa.snmt.link/c/4?category_master_slug=4&brand_master_slug=1467?source=home
+              - generic [ref=e1561]:
+                - generic [ref=e1562]:
+                  - img [ref=e1563]
+                  - generic [ref=e1567]: 0% EMI
+                - generic [ref=e1570]:
+                  - generic [ref=e1572]: Starting
+                  - generic [ref=e1573]:
+                    - generic [ref=e1574]: ₹337
+                    - generic [ref=e1575]: /mon
+            - link "0% EMI Starting ₹440 /mon" [ref=e1578] [cursor=pointer]:
+              - /url: https://website.qa.snmt.link/c/23?category_master_slug=23&brand_master_slug=80?source=home
+              - generic [ref=e1579]:
+                - generic [ref=e1580]:
+                  - img [ref=e1581]
+                  - generic [ref=e1585]: 0% EMI
+                - generic [ref=e1588]:
+                  - generic [ref=e1590]: Starting
+                  - generic [ref=e1591]:
+                    - generic [ref=e1592]: ₹440
+                    - generic [ref=e1593]: /mon
+            - link "Starting ₹595 /mon" [ref=e1596] [cursor=pointer]:
+              - /url: https://website.qa.snmt.link/c/303?category_master_slug=303&brand_master_slug=30?source=home
+              - generic [ref=e1597]:
+                - img [ref=e1599]
+                - generic [ref=e1602]:
+                  - generic [ref=e1604]: Starting
+                  - generic [ref=e1605]:
+                    - generic [ref=e1606]: ₹595
+                    - generic [ref=e1607]: /mon
+            - link "0% EMI Starting ₹199 /mon" [ref=e1610] [cursor=pointer]:
+              - /url: https://website.qa.snmt.link/c/78?category_master_slug=78&brand_master_slug=1335?source=home
+              - generic [ref=e1611]:
+                - generic [ref=e1612]:
+                  - img [ref=e1613]
+                  - generic [ref=e1617]: 0% EMI
+                - generic [ref=e1620]:
+                  - generic [ref=e1622]: Starting
+                  - generic [ref=e1623]:
+                    - generic [ref=e1624]: ₹199
+                    - generic [ref=e1625]: /mon
+            - link "Starting ₹212 /mon" [ref=e1628] [cursor=pointer]:
+              - /url: https://website.qa.snmt.link/c/78?category_master_slug=78&brand_master_slug=1489?source=home
+              - generic [ref=e1629]:
+                - img [ref=e1631]
+                - generic [ref=e1634]:
+                  - generic [ref=e1636]: Starting
+                  - generic [ref=e1637]:
+                    - generic [ref=e1638]: ₹212
+                    - generic [ref=e1639]: /mon
+            - link "0% EMI Starting ₹680 /mon" [ref=e1642] [cursor=pointer]:
+              - /url: https://website.qa.snmt.link/c/78?category_master_slug=78&brand_master_slug=38?source=home
+              - generic [ref=e1643]:
+                - generic [ref=e1644]:
+                  - img [ref=e1645]
+                  - generic [ref=e1649]: 0% EMI
+                - generic [ref=e1652]:
+                  - generic [ref=e1654]: Starting
+                  - generic [ref=e1655]:
+                    - generic [ref=e1656]: ₹680
+                    - generic [ref=e1657]: /mon
+            - link "Starting ₹2601 /mon" [ref=e1660] [cursor=pointer]:
+              - /url: https://website.qa.snmt.link/c/2?category_master_slug=2&brand_master_slug=10?source=home
+              - generic [ref=e1661]:
+                - img [ref=e1663]
+                - generic [ref=e1666]:
+                  - generic [ref=e1668]: Starting
+                  - generic [ref=e1669]:
+                    - generic [ref=e1670]: ₹2601
+                    - generic [ref=e1671]: /mon
+            - link "0% EMI Starting ₹337 /mon" [ref=e1674] [cursor=pointer]:
+              - /url: https://website.qa.snmt.link/c/298?category_master_slug=298&brand_master_slug=218?source=home
+              - generic [ref=e1675]:
+                - generic [ref=e1676]:
+                  - img [ref=e1677]
+                  - generic [ref=e1681]: 0% EMI
+                - generic [ref=e1684]:
+                  - generic [ref=e1686]: Starting
+                  - generic [ref=e1687]:
+                    - generic [ref=e1688]: ₹337
+                    - generic [ref=e1689]: /mon
+        - generic [ref=e1692]:
+          - generic [ref=e1693]:
+            - generic [ref=e1695]: Deals of The Day🤝🏻🤝🏻🤝🏻
+            - button "View All" [ref=e1697] [cursor=pointer]:
+              - generic [ref=e1699]: View All
+          - generic [ref=e1700]:
+            - link "0% EMI Starting ₹553 /mon" [ref=e1703] [cursor=pointer]:
+              - /url: https://website.qa.snmt.link/c/67?category_master_slug=67&brand_master_slug=248?source=home
+              - generic [ref=e1704]:
+                - generic [ref=e1705]:
+                  - img [ref=e1706]
+                  - generic [ref=e1710]: 0% EMI
+                - generic [ref=e1713]:
+                  - generic [ref=e1715]: Starting
+                  - generic [ref=e1716]:
+                    - generic [ref=e1717]: ₹553
+                    - generic [ref=e1718]: /mon
+            - link "0% EMI Starting ₹577 /mon" [ref=e1721] [cursor=pointer]:
+              - /url: https://website.qa.snmt.link/c/67?category_master_slug=67&brand_master_slug=1456?source=home
+              - generic [ref=e1722]:
+                - generic [ref=e1723]:
+                  - img [ref=e1724]
+                  - generic [ref=e1728]: 0% EMI
+                - generic [ref=e1731]:
+                  - generic [ref=e1733]: Starting
+                  - generic [ref=e1734]:
+                    - generic [ref=e1735]: ₹577
+                    - generic [ref=e1736]: /mon
+        - generic [ref=e1739]:
+          - generic [ref=e1740]:
+            - generic [ref=e1742]: Fashion Wear0️⃣💳🛍️✨🔥💰🪙🏷️🎉📦⚡🛒💵📱🎯🚀🧾
+            - button "View All" [ref=e1744] [cursor=pointer]:
+              - generic [ref=e1746]: View All
+          - generic [ref=e1747]:
+            - link "0% EMI Starting ₹646 /mon" [ref=e1750] [cursor=pointer]:
+              - /url: https://website.qa.snmt.link/c/62?category_master_slug=62&brand_master_slug=931?source=home
+              - generic [ref=e1751]:
+                - generic [ref=e1752]:
+                  - img [ref=e1753]
+                  - generic [ref=e1757]: 0% EMI
+                - generic [ref=e1760]:
+                  - generic [ref=e1762]: Starting
+                  - generic [ref=e1763]:
+                    - generic [ref=e1764]: ₹646
+                    - generic [ref=e1765]: /mon
+            - link "0% EMI Starting ₹285 /mon" [ref=e1768] [cursor=pointer]:
+              - /url: https://website.qa.snmt.link/c/62?category_master_slug=62&brand_master_slug=1386?source=home
+              - generic [ref=e1769]:
+                - generic [ref=e1770]:
+                  - img [ref=e1771]
+                  - generic [ref=e1775]: 0% EMI
+                - generic [ref=e1778]:
+                  - generic [ref=e1780]: Starting
+                  - generic [ref=e1781]:
+                    - generic [ref=e1782]: ₹285
+                    - generic [ref=e1783]: /mon
+            - link "0% EMI Starting ₹388 /mon" [ref=e1786] [cursor=pointer]:
+              - /url: https://website.qa.snmt.link/c/67?category_master_slug=67&brand_master_slug=1471?source=home
+              - generic [ref=e1787]:
+                - generic [ref=e1788]:
+                  - img [ref=e1789]
+                  - generic [ref=e1793]: 0% EMI
+                - generic [ref=e1796]:
+                  - generic [ref=e1798]: Starting
+                  - generic [ref=e1799]:
+                    - generic [ref=e1800]: ₹388
+                    - generic [ref=e1801]: /mon
+            - link "0% EMI Starting ₹474 /mon" [ref=e1804] [cursor=pointer]:
+              - /url: https://website.qa.snmt.link/c/67?category_master_slug=67&brand_master_slug=1456?source=home
+              - generic [ref=e1805]:
+                - generic [ref=e1806]:
+                  - img [ref=e1807]
+                  - generic [ref=e1811]: 0% EMI
+                - generic [ref=e1814]:
+                  - generic [ref=e1816]: Starting
+                  - generic [ref=e1817]:
+                    - generic [ref=e1818]: ₹474
+                    - generic [ref=e1819]: /mon
+            - link "0% EMI Starting ₹230 /mon" [ref=e1822] [cursor=pointer]:
+              - /url: https://website.qa.snmt.link/c/67?category_master_slug=67&brand_master_slug=248?source=home
+              - generic [ref=e1823]:
+                - generic [ref=e1824]:
+                  - img [ref=e1825]
+                  - generic [ref=e1829]: 0% EMI
+                - generic [ref=e1832]:
+                  - generic [ref=e1834]: Starting
+                  - generic [ref=e1835]:
+                    - generic [ref=e1836]: ₹230
+                    - generic [ref=e1837]: /mon
+            - link "0% EMI Starting ₹192 /mon" [ref=e1840] [cursor=pointer]:
+              - /url: https://website.qa.snmt.link/c/67?category_master_slug=67&brand_master_slug=329?source=home
+              - generic [ref=e1841]:
+                - generic [ref=e1842]:
+                  - img [ref=e1843]
+                  - generic [ref=e1847]: 0% EMI
+                - generic [ref=e1850]:
+                  - generic [ref=e1852]: Starting
+                  - generic [ref=e1853]:
+                    - generic [ref=e1854]: ₹192
+                    - generic [ref=e1855]: /mon
+            - link "0% EMI Starting ₹319 /mon" [ref=e1858] [cursor=pointer]:
+              - /url: https://website.qa.snmt.link/c/80?category_master_slug=80&brand_master_slug=1425?source=home
+              - generic [ref=e1859]:
+                - generic [ref=e1860]:
+                  - img [ref=e1861]
+                  - generic [ref=e1865]: 0% EMI
+                - generic [ref=e1868]:
+                  - generic [ref=e1870]: Starting
+                  - generic [ref=e1871]:
+                    - generic [ref=e1872]: ₹319
+                    - generic [ref=e1873]: /mon
+        - generic [ref=e1876]:
+          - generic [ref=e1877]:
+            - generic [ref=e1879]: Trending 0️⃣💳🛍️✨🔥💰🪙🏷️🎉📦
+            - button "View All" [ref=e1881] [cursor=pointer]:
+              - generic [ref=e1883]: View All
+          - generic [ref=e1884]:
+            - generic [ref=e1887] [cursor=pointer]:
+              - generic [ref=e1888]:
+                - generic [ref=e1890]:
+                  - img [ref=e1892]
+                  - img "Lowest Price Ever" [ref=e1893]
+                - img [ref=e1894]
+                - generic [ref=e1895]:
+                  - generic [ref=e1896]: "4.8"
+                  - generic [ref=e1897]:
+                    - img [ref=e1899]
+                    - img "Star Icon" [ref=e1900]
+                - generic [ref=e1904]: 0% EMI
+              - generic [ref=e1905]:
+                - generic [ref=e1906]:
+                  - generic [ref=e1907]:
+                    - generic [ref=e1908]: ₹740
+                    - generic [ref=e1909]: /mon
+                  - generic [ref=e1911]: 5.7K+ sold
+                - generic [ref=e1913]: sk test product
+                - generic [ref=e1914]:
+                  - generic [ref=e1915]: ₹1499
+                  - generic [ref=e1916]: ₹6999
+                  - generic [ref=e1918]: 79% off
+            - generic [ref=e1921] [cursor=pointer]:
+              - generic [ref=e1922]:
+                - generic [ref=e1924]:
+                  - img [ref=e1926]
+                  - img "Extra X off" [ref=e1927]
+                - img [ref=e1928]
+                - generic [ref=e1932]: 0% EMI
+              - generic [ref=e1933]:
+                - generic [ref=e1934]:
+                  - generic [ref=e1935]:
+                    - generic [ref=e1936]: ₹567
+                    - generic [ref=e1937]: /mon
+                  - generic [ref=e1939]: 8K+ sold
+                - generic [ref=e1941]: Sk Test product
+                - generic [ref=e1942]:
+                  - generic [ref=e1943]: ₹2000
+                  - generic [ref=e1944]: ₹3299
+                  - generic [ref=e1946]: 39% off
+            - generic [ref=e1949] [cursor=pointer]:
+              - generic [ref=e1950]:
+                - img [ref=e1951]
+                - generic [ref=e1955]: 0% EMI
+              - generic [ref=e1956]:
+                - generic [ref=e1957]:
+                  - generic [ref=e1958]:
+                    - generic [ref=e1959]: ₹2799
+                    - generic [ref=e1960]: /mon
+                  - generic [ref=e1962]: 1.3K+ sold
+                - generic [ref=e1964]: Nothing Phone (3a) (White, 128 GB) (8 GB RAM)
+                - generic [ref=e1965]:
+                  - generic [ref=e1966]: ₹24999
+                  - generic [ref=e1967]: ₹27999
+                  - generic [ref=e1969]: 11% off
+            - generic [ref=e1972] [cursor=pointer]:
+              - generic [ref=e1973]:
+                - img [ref=e1974]
+                - generic [ref=e1978]: 0% EMI
+              - generic [ref=e1979]:
+                - generic [ref=e1980]:
+                  - generic [ref=e1981]:
+                    - generic [ref=e1982]: ₹1261
+                    - generic [ref=e1983]: /mon
+                  - generic [ref=e1985]: 4.3K+ sold
+                - generic [ref=e1987]: Sk Test product1
+                - generic [ref=e1988]:
+                  - generic [ref=e1989]: ₹15000
+                  - generic [ref=e1990]: ₹18999
+                  - generic [ref=e1992]: 21% off
+            - generic [ref=e1995] [cursor=pointer]:
+              - generic [ref=e1996]:
+                - img [ref=e1997]
+                - generic [ref=e2001]: 0% EMI
+              - generic [ref=e2002]:
+                - generic [ref=e2003]:
+                  - generic [ref=e2004]:
+                    - generic [ref=e2005]: ₹529
+                    - generic [ref=e2006]: /mon
+                  - generic [ref=e2008]: 6.7K+ sold
+                - generic [ref=e2010]: sk test product
+                - generic [ref=e2011]:
+                  - generic [ref=e2012]: ₹1559
+                  - generic [ref=e2013]: ₹6490
+                  - generic [ref=e2015]: 76% off
+            - generic [ref=e2018] [cursor=pointer]:
+              - generic [ref=e2019]:
+                - generic [ref=e2021]:
+                  - img [ref=e2023]
+                  - img "Crazy Deal" [ref=e2024]
+                - img [ref=e2025]
+                - generic [ref=e2029]: 0% EMI
+              - generic [ref=e2030]:
+                - generic [ref=e2031]:
+                  - generic [ref=e2032]:
+                    - generic [ref=e2033]: ₹567
+                    - generic [ref=e2034]: /mon
+                  - generic [ref=e2036]: 10.2K+ sold
+                - generic [ref=e2038]: sk test product
+                - generic [ref=e2039]:
+                  - generic [ref=e2040]: ₹2000
+                  - generic [ref=e2041]: ₹3699
+                  - generic [ref=e2043]: 46% off
+            - generic [ref=e2046] [cursor=pointer]:
+              - generic [ref=e2047]:
+                - img [ref=e2048]
+                - generic [ref=e2052]: 0% EMI
+              - generic [ref=e2053]:
+                - generic [ref=e2054]:
+                  - generic [ref=e2055]:
+                    - generic [ref=e2056]: ₹302
+                    - generic [ref=e2057]: /mon
+                  - generic [ref=e2059]: 52.2K+ sold
+                - generic [ref=e2061]: boAt Airdopes 181 Pro Wireless Earbuds with 100 Hours Playback, Quad Mics with ENx, BEAST Mode, ASAP Charge (Mocha Elegance)
+                - generic [ref=e2062]:
+                  - generic [ref=e2063]: ₹899
+                  - generic [ref=e2064]: ₹4990
+                  - generic [ref=e2066]: 82% off
+            - generic [ref=e2069] [cursor=pointer]:
+              - generic [ref=e2070]:
+                - img [ref=e2071]
+                - generic [ref=e2075]: 0% EMI
+              - generic [ref=e2076]:
+                - generic [ref=e2077]:
+                  - generic [ref=e2078]:
+                    - generic [ref=e2079]: ₹405
+                    - generic [ref=e2080]: /mon
+                  - generic [ref=e2082]: 410+ sold
+                - generic [ref=e2084]: Sk Test product
+                - generic [ref=e2085]:
+                  - generic [ref=e2086]: ₹1200
+                  - generic [ref=e2087]: ₹1799
+                  - generic [ref=e2089]: 33% off
+            - generic [ref=e2092] [cursor=pointer]:
+              - generic [ref=e2093]:
+                - img [ref=e2094]
+                - generic [ref=e2098]: 0% EMI
+              - generic [ref=e2099]:
+                - generic [ref=e2100]:
+                  - generic [ref=e2101]:
+                    - generic [ref=e2102]: ₹1524
+                    - generic [ref=e2103]: /mon
+                  - generic [ref=e2105]: 1.4K+ sold
+                - generic [ref=e2107]: Infinix Note 40X 5G (Palm Blue, 256 GB) (12 GB RAM)
+                - generic [ref=e2108]:
+                  - generic [ref=e2109]: ₹13999
+                  - generic [ref=e2110]: ₹21999
+                  - generic [ref=e2112]: 36% off
+            - generic [ref=e2115] [cursor=pointer]:
+              - generic [ref=e2116]:
+                - img [ref=e2117]
+                - generic [ref=e2121]: 0% EMI
+              - generic [ref=e2122]:
+                - generic [ref=e2123]:
+                  - generic [ref=e2124]:
+                    - generic [ref=e2125]: ₹2225
+                    - generic [ref=e2126]: /mon
+                  - generic [ref=e2128]: 1.1K+ sold
+                - generic [ref=e2130]: iNFiRe FireBar 12 upto 10 Hours PlayTime With TWS Function 12 W Bluetooth Soundbar(Black, 2.0 Channel)
+                - generic [ref=e2131]:
+                  - generic [ref=e2132]: ₹6500
+                  - generic [ref=e2133]: ₹7000
+                  - generic [ref=e2135]: 7% off
+            - generic [ref=e2138] [cursor=pointer]:
+              - generic [ref=e2139]:
+                - img [ref=e2140]
+                - generic [ref=e2144]: 0% EMI
+              - generic [ref=e2145]:
+                - generic [ref=e2146]:
+                  - generic [ref=e2147]:
+                    - generic [ref=e2148]: ₹559
+                    - generic [ref=e2149]: /mon
+                  - generic [ref=e2151]: 55.6K+ sold
+                - generic [ref=e2153]: OnePlus Bullets Z2 Bluetooth Wireless with Mic, Bombastic Bass - 12.4 mm Drivers, 20 Hrs Music, 30 Hrs Battery Life, Water Resistant (Black)
+                - generic [ref=e2154]:
+                  - generic [ref=e2155]: ₹1649
+                  - generic [ref=e2156]: ₹2299
+                  - generic [ref=e2158]: 28% off
+            - generic [ref=e2161] [cursor=pointer]:
+              - generic [ref=e2162]:
+                - img [ref=e2163]
+                - generic [ref=e2167]: 0% EMI
+              - generic [ref=e2168]:
+                - generic [ref=e2169]:
+                  - generic [ref=e2170]:
+                    - generic [ref=e2171]: ₹6861
+                    - generic [ref=e2172]: /mon
+                  - generic [ref=e2174]: 4.7K+ sold
+                - generic [ref=e2176]: Sk Test product1
+                - generic [ref=e2177]:
+                  - generic [ref=e2178]: ₹20000
+                  - generic [ref=e2179]: ₹50000
+                  - generic [ref=e2181]: 60% off
+            - generic [ref=e2184] [cursor=pointer]:
+              - generic [ref=e2185]:
+                - img [ref=e2186]
+                - generic [ref=e2190]: 0% EMI
+              - generic [ref=e2191]:
+                - generic [ref=e2192]:
+                  - generic [ref=e2193]:
+                    - generic [ref=e2194]: ₹1997
+                    - generic [ref=e2195]: /mon
+                  - generic [ref=e2197]: 3.2K+ sold
+                - generic [ref=e2199]: OnePlus Nord CE4 Lite 5G (Super Silver, 128 GB) (8 GB RAM)
+                - generic [ref=e2200]:
+                  - generic [ref=e2201]: ₹17999
+                  - generic [ref=e2202]: ₹19999
+                  - generic [ref=e2204]: 10% off
+            - generic [ref=e2207] [cursor=pointer]:
+              - img [ref=e2209]
+              - generic [ref=e2210]:
+                - generic [ref=e2211]:
+                  - generic [ref=e2212]:
+                    - generic [ref=e2213]: ₹817
+                    - generic [ref=e2214]: /mon
+                  - generic [ref=e2216]: 1.7K+ sold
+                - generic [ref=e2218]: "Leader Scout MTB 26T Mountain Bicycle/Bike Without Gear Single Speed for Men - Sea Green, Ideal for 10 + Years, Frame Size: 18 Inches"
+                - generic [ref=e2219]:
+                  - generic [ref=e2220]: ₹4499
+                  - generic [ref=e2221]: ₹7500
+                  - generic [ref=e2223]: 40% off
+            - generic [ref=e2226] [cursor=pointer]:
+              - generic [ref=e2227]:
+                - img [ref=e2228]
+                - generic [ref=e2232]: 0% EMI
+              - generic [ref=e2233]:
+                - generic [ref=e2234]:
+                  - generic [ref=e2235]:
+                    - generic [ref=e2236]: ₹700
+                    - generic [ref=e2237]: /mon
+                  - generic [ref=e2239]: 2.8K+ sold
+                - generic [ref=e2241]: POCO C61 (Blue, 4GB RAM, 64GB Storage)
+                - generic [ref=e2242]:
+                  - generic [ref=e2243]: ₹6299
+                  - generic [ref=e2244]: ₹8999
+                  - generic [ref=e2246]: 30% off
+            - generic [ref=e2249] [cursor=pointer]:
+              - img [ref=e2251]
+              - generic [ref=e2252]:
+                - generic [ref=e2253]:
+                  - generic [ref=e2254]:
+                    - generic [ref=e2255]: ₹680
+                    - generic [ref=e2256]: /mon
+                  - generic [ref=e2258]: 1K+ sold
+                - generic [ref=e2260]: Safari Hue Hard Luggage with Dual Wheels - Multicolor (Medium) (65 x 45 x 30 cm)
+                - generic [ref=e2261]:
+                  - generic [ref=e2262]: ₹3999
+                  - generic [ref=e2263]: ₹10569
+                  - generic [ref=e2265]: 62% off
+            - generic [ref=e2268] [cursor=pointer]:
+              - img [ref=e2270]
+              - generic [ref=e2271]:
+                - generic [ref=e2272]:
+                  - generic [ref=e2273]:
+                    - generic [ref=e2274]: ₹1097
+                    - generic [ref=e2275]: /mon
+                  - generic [ref=e2277]: 700+ sold
+                - generic [ref=e2279]: Vivo Y29 5G 6GB+128GB Glacier Blue
+                - generic [ref=e2280]:
+                  - generic [ref=e2281]: ₹15499
+                  - generic [ref=e2282]: ₹17999
+                  - generic [ref=e2284]: 14% off
+            - generic [ref=e2287] [cursor=pointer]:
+              - generic [ref=e2288]:
+                - img [ref=e2289]
+                - generic [ref=e2293]: 0% EMI
+              - generic [ref=e2294]:
+                - generic [ref=e2295]:
+                  - generic [ref=e2296]:
+                    - generic [ref=e2297]: ₹268
+                    - generic [ref=e2298]: /mon
+                  - generic [ref=e2300]: 4.2K+ sold
+                - generic [ref=e2302]: Croma 1600 Watts Steam Iron (Overheat Safety, Grey) With 1 Year Warranty (Grey) - A Tata Product
+                - generic [ref=e2303]:
+                  - generic [ref=e2304]: ₹799
+                  - generic [ref=e2305]: ₹2000
+                  - generic [ref=e2307]: 60% off
+            - generic [ref=e2310] [cursor=pointer]:
+              - generic [ref=e2311]:
+                - img [ref=e2312]
+                - generic [ref=e2316]: 0% EMI
+              - generic [ref=e2317]:
+                - generic [ref=e2318]:
+                  - generic [ref=e2319]:
+                    - generic [ref=e2320]: ₹800
+                    - generic [ref=e2321]: /mon
+                  - generic [ref=e2323]: 620+ sold
+                - generic [ref=e2325]: OPPO A3x (Ocean Blue, 64 GB) (4 GB RAM)
+                - generic [ref=e2326]:
+                  - generic [ref=e2327]: ₹8999
+                  - generic [ref=e2328]: ₹12999
+                  - generic [ref=e2330]: 31% off
+            - generic [ref=e2333] [cursor=pointer]:
+              - img [ref=e2335]
+              - generic [ref=e2336]:
+                - generic [ref=e2337]:
+                  - generic [ref=e2338]:
+                    - generic [ref=e2339]: ₹920
+                    - generic [ref=e2340]: /mon
+                  - generic [ref=e2342]: 1.5K+ sold
+                - generic [ref=e2344]: POCO M6 Plus 5G (Misty Lavender, 128 GB) (6 GB RAM)
+                - generic [ref=e2345]:
+                  - generic [ref=e2346]: ₹12999
+                  - generic [ref=e2347]: ₹15999
+                  - generic [ref=e2349]: 19% off
+            - generic [ref=e2352] [cursor=pointer]:
+              - generic [ref=e2353]:
+                - img [ref=e2354]
+                - generic [ref=e2358]: 0% EMI
+              - generic [ref=e2359]:
+                - generic [ref=e2360]:
+                  - generic [ref=e2361]:
+                    - generic [ref=e2362]: ₹1007
+                    - generic [ref=e2363]: /mon
+                  - generic [ref=e2365]: 1.9K+ sold
+                - generic [ref=e2367]: Foxsky 80 cm (32 inches) Full HD Smart Android LED TV 32FSELS Pro (Frameless Edition) (Dolby Audio) (Black)
+                - generic [ref=e2368]:
+                  - generic [ref=e2369]: ₹9000
+                  - generic [ref=e2370]: ₹21000
+                  - generic [ref=e2372]: 57% off
+            - generic [ref=e2375] [cursor=pointer]:
+              - img [ref=e2377]
+              - generic [ref=e2378]:
+                - generic [ref=e2379]:
+                  - generic [ref=e2380]:
+                    - generic [ref=e2381]: ₹1027
+                    - generic [ref=e2382]: /mon
+                  - generic [ref=e2384]: 250+ sold
+                - generic [ref=e2386]: Lava Blaze X 5G - Titanium Grey (4GB RAM | 128GB Storage)
+                - generic [ref=e2387]:
+                  - generic [ref=e2388]: ₹14499
+                  - generic [ref=e2389]: ₹16999
+                  - generic [ref=e2391]: 15% off
+        - generic [ref=e2394]:
+          - generic [ref=e2397]: Top Brands for you 0️⃣💳🛍️✨. 🔥💰🪙🏷️🎉📦⚡🛒💵
+          - generic [ref=e2401] [cursor=pointer]:
+            - generic [ref=e2402]:
+              - img [ref=e2403]
+              - generic [ref=e2407]: 0% EMI
+            - generic [ref=e2408]:
+              - generic [ref=e2410]:
+                - generic [ref=e2411]: ₹165
+                - generic [ref=e2412]: /mon
+              - generic [ref=e2414]: test product
+              - generic [ref=e2415]:
+                - generic [ref=e2416]: ₹500
+                - generic [ref=e2417]: ₹749
+                - generic [ref=e2419]: 33% off
+        - generic [ref=e2421]:
+          - generic [ref=e2422]:
+            - generic [ref=e2423]: Checkout Merchants Homepage Deals Product!
+            - button "View All" [ref=e2426] [cursor=pointer]:
+              - generic [ref=e2428]: View All
+          - generic [ref=e2430]:
+            - generic [ref=e2431]:
+              - generic [ref=e2433] [cursor=pointer]:
+                - generic [ref=e2434]:
+                  - img [ref=e2435]
+                  - generic [ref=e2439]: 0% EMI
+                - generic [ref=e2440]:
+                  - generic [ref=e2442]:
+                    - generic [ref=e2443]: ₹1367
+                    - generic [ref=e2444]: /mon
+                  - generic [ref=e2446]: Karagiri, Handcrafted Saaress
+                  - generic [ref=e2447]:
+                    - generic [ref=e2448]: ₹4100
+                    - generic [ref=e2449]: ₹16399
+                    - generic [ref=e2451]: 75% off
+              - generic [ref=e2453] [cursor=pointer]:
+                - generic [ref=e2454]:
+                  - img [ref=e2455]
+                  - generic [ref=e2459]: 0% EMI
+                - generic [ref=e2460]:
+                  - generic [ref=e2462]:
+                    - generic [ref=e2463]: ₹1155
+                    - generic [ref=e2464]: /mon
+                  - generic [ref=e2466]: XYXX, Men's Premium Loungwear
+                  - generic [ref=e2467]:
+                    - generic [ref=e2468]: ₹3464
+                    - generic [ref=e2469]: ₹4948
+                    - generic [ref=e2471]: 30% off
+            - generic [ref=e2473] [cursor=pointer]:
+              - generic [ref=e2474]:
+                - img [ref=e2475]
+                - generic [ref=e2479]: 0% EMI
+              - generic [ref=e2480]:
+                - generic [ref=e2482]:
+                  - generic [ref=e2483]: ₹2300
+                  - generic [ref=e2484]: /mon
+                - generic [ref=e2486]: Kushal , Fashion & Bridal Jewellery
+                - generic [ref=e2488]: ₹6900
+    - contentinfo [ref=e2489]:
+      - generic [ref=e2491]:
+        - generic [ref=e2493]:
+          - generic [ref=e2494]:
+            - generic [ref=e2495]: Category on EMI
+            - list [ref=e2496]:
+              - listitem "Chairs" [ref=e2497]:
+                - link "Chairs on EMI" [ref=e2498] [cursor=pointer]:
+                  - /url: /c/chairs-on-emi
+              - listitem "Laptops" [ref=e2499]:
+                - link "Laptops on EMI" [ref=e2500] [cursor=pointer]:
+                  - /url: /c/laptops-on-emi
+              - listitem "Dell" [ref=e2501]:
+                - link "Dell on EMI" [ref=e2502] [cursor=pointer]:
+                  - /url: https://snapmint.com/
+              - listitem "audio device" [ref=e2503]:
+                - link "audio device on EMI" [ref=e2504] [cursor=pointer]:
+                  - /url: /audio-devices-on-emi
+          - generic [ref=e2505]:
+            - generic [ref=e2506]: Mobile & Laptop on EMI
+            - list [ref=e2507]:
+              - listitem "Audio Devices" [ref=e2508]:
+                - link "Audio Devices on EMI" [ref=e2509] [cursor=pointer]:
+                  - /url: /c/audio-devices-on-emi
+          - generic [ref=e2510]:
+            - generic [ref=e2511]: Mobile & Tablets on EMI
+            - list [ref=e2512]:
+              - listitem "Tablets" [ref=e2513]:
+                - link "Tablets on EMI" [ref=e2514] [cursor=pointer]:
+                  - /url: /c/tablets-on-emi
+              - listitem "Power Banks" [ref=e2515]:
+                - link "Power Banks on EMI" [ref=e2516] [cursor=pointer]:
+                  - /url: /c/power-banks-on-emi
+              - listitem "Category" [ref=e2517]:
+                - link "Category on EMI" [ref=e2518] [cursor=pointer]:
+                  - /url: /mobiles-on-emi
+          - generic [ref=e2519]:
+            - generic [ref=e2520]: Laptops on EMI
+            - list [ref=e2521]:
+              - listitem "Lenovo" [ref=e2522]:
+                - link "Lenovo on EMI" [ref=e2523] [cursor=pointer]:
+                  - /url: /b/lenovo-on-emi
+              - listitem "HP" [ref=e2524]:
+                - link "HP on EMI" [ref=e2525] [cursor=pointer]:
+                  - /url: /b/hp-on-emi
+          - generic [ref=e2526]:
+            - generic [ref=e2527]: Appliances on EMI
+            - list [ref=e2528]:
+              - listitem "Crompton" [ref=e2529]:
+                - link "Crompton on EMI" [ref=e2530] [cursor=pointer]:
+                  - /url: /b/crompton-on-emi
+          - generic [ref=e2531]:
+            - generic [ref=e2532]: Health Supplements on EMI
+            - list [ref=e2533]:
+              - listitem "FooterTest" [ref=e2534]:
+                - link "FooterTest on EMI" [ref=e2535] [cursor=pointer]:
+                  - /url: /health-supplements-on-emi
+          - generic [ref=e2536]:
+            - generic [ref=e2537]: Electronics on EMI
+            - list [ref=e2538]:
+              - listitem "test" [ref=e2539]:
+                - link "test on EMI" [ref=e2540] [cursor=pointer]:
+                  - /url: /stores/myntra-shopping-on-emi
+        - link "Snapmint for Business" [ref=e2543] [cursor=pointer]:
+          - /url: https://www.snapmintbusiness.com/
+          - generic [ref=e2544]:
+            - generic [ref=e2545]: Snapmint for Business
+            - img [ref=e2547]
+        - generic [ref=e2551]:
+          - generic [ref=e2552]:
+            - link "snapmint" [ref=e2554] [cursor=pointer]:
+              - /url: /
+              - img "snapmint" [ref=e2555]
+            - generic [ref=e2564]:
+              - paragraph [ref=e2565]: Snapmint Credit Advisory Private Limited
+              - generic [ref=e2566]: Office No. 201, 2nd Floor, C-Wing, Neelkanth Business Park, Nr. Vidyavihar Station, Vidyavihar (West), Mumbai - 400086
+              - generic [ref=e2567]: "Contact number: 022-48931351"
+              - generic [ref=e2568]: Monday to Sunday (10AM to 7PM)
+          - generic [ref=e2569]:
+            - generic [ref=e2571]: Quick links
+            - list [ref=e2572]:
+              - listitem "About us" [ref=e2573]:
+                - link "About us" [ref=e2574] [cursor=pointer]:
+                  - /url: https://www.amazon.in/
+                  - generic [ref=e2575]: About us
+              - listitem "Partners" [ref=e2576]:
+                - link "Partners" [ref=e2577] [cursor=pointer]:
+                  - /url: /c/cycles-on-emi-d56b78bf-dbf9-4ade-899b-49e736ec52f6
+                  - generic [ref=e2578]: Partners
+              - listitem "Careers" [ref=e2579]:
+                - link "Careers" [ref=e2580] [cursor=pointer]:
+                  - /url: https://www.flipkart.com
+                  - generic [ref=e2581]: Careers
+              - listitem "Request EMI Payment Solution" [ref=e2582]:
+                - link "Request EMI Payment Solution" [ref=e2583] [cursor=pointer]:
+                  - /url: https://business.snapmint.com
+                  - generic [ref=e2584]: Request EMI Payment Solution
+          - generic [ref=e2585]:
+            - generic [ref=e2587]: Support links
+            - list [ref=e2588]:
+              - listitem "Terms and Conditions" [ref=e2589]:
+                - link "Terms and Conditions" [ref=e2590] [cursor=pointer]:
+                  - /url: /terms-and-conditions?seth=true
+                  - generic [ref=e2591]: Terms and Conditions
+              - listitem "Refund Policy" [ref=e2592]:
+                - link "Refund Policy" [ref=e2593] [cursor=pointer]:
+                  - /url: /refund-policy?seth=true
+                  - generic [ref=e2594]: Refund Policy
+          - generic [ref=e2595]:
+            - generic [ref=e2596]:
+              - generic [ref=e2598]: Download Snapmint Today
+              - generic [ref=e2599]:
+                - link "Google Play" [ref=e2600] [cursor=pointer]:
+                  - /url: https://play.google.com/store/apps/details?id=com.snapmint.customerapp&hl=en_IN&gl=IN
+                  - generic [ref=e2602]:
+                    - img [ref=e2604]
+                    - img "Google Play" [ref=e2605]
+                - link "App Store" [ref=e2606] [cursor=pointer]:
+                  - /url: https://apps.apple.com/in/app/snapmint-buy-now-pay-in-emis/id6450001111
+                  - generic [ref=e2608]:
+                    - img [ref=e2610]
+                    - img "App Store" [ref=e2611]
+            - generic [ref=e2612]:
+              - link [ref=e2613] [cursor=pointer]:
+                - /url: https://www.facebook.com/SnapmintCardlessEmi
+                - img [ref=e2614]
+              - link [ref=e2616] [cursor=pointer]:
+                - /url: https://www.instagram.com/snapmintofficial/
+                - img [ref=e2617]
+              - link [ref=e2621] [cursor=pointer]:
+                - /url: https://twitter.com/SnapmintEmi
+                - img [ref=e2622]
+              - link [ref=e2624] [cursor=pointer]:
+                - /url: https://www.youtube.com/channel/UCHAGSDZTYM8f2mmaphsD62A
+                - img [ref=e2625]
+            - generic [ref=e2628]: Proudly made in India
+  - alert [ref=e2629]
+```
+
+# Test source
+
+```ts
+  1  | import { expect } from '@playwright/test';
+  2  | 
+  3  | export class WebsitePage {
+  4  |     constructor(page) {
+  5  |         this.page = page;
+  6  |         this.signUpBtn = page.getByRole('button', { name: 'Sign Up' });
+  7  |         this.mobileInput = page.locator('#mobile');
+  8  |         this.signInSignUpHeader = page.getByText('Sign In / Sign Up');
+  9  |         this.getOtpBtn = page.getByRole('button', { name: 'Get OTP' });
+  10 |         this.otpSentText = page.getByText('OTP sent to +91');
+  11 |         this.otpInput = page.getByRole('textbox', { name: 'OTP' });
+  12 |         this.nextBtn = page.getByRole('button', { name: 'Next', exact: true });
+  13 | 
+  14 |         // Product page selectors
+  15 |         this.productEmiOption = page.getByText(/x 3 months/i).first(); // Matches EMI plan on product page
+  16 |         this.buyEmiBtn = page.getByRole('button', { name: 'Buy on 3 months EMI' });
+  17 |         this.sizeDropdown = page.getByRole('combobox').nth(1);
+  18 |         this.sizeOption = page.getByTitle('5 (UK/INDIA)');
+  19 |     }
+  20 | 
+  21 |     async open() {
+> 22 |         await this.page.goto('/', {
+     |                         ^ TimeoutError: page.goto: Timeout 60000ms exceeded.
+  23 |             waitUntil: 'load',
+  24 |             timeout: 60000,
+  25 |         });
+  26 |         await this.page.waitForLoadState('networkidle').catch(() => { });
+  27 |         await expect(
+  28 |             this.page.getByRole('button', { name: 'Sign Up' })
+  29 |         ).toBeVisible();
+  30 |     }
+  31 | 
+  32 |     async signUp(mobile, otp) {
+  33 |         await this.signUpBtn.click();
+  34 |         console.log('Clicked Sign Up button');
+  35 | 
+  36 |         // Handle client-side hydration delay where the first click might not trigger the modal
+  37 |         try {
+  38 |             await this.mobileInput.waitFor({ state: 'visible', timeout: 5000 });
+  39 |         } catch (e) {
+  40 |             console.log('Sign Up modal did not appear. Retrying click...');
+  41 |             await this.signUpBtn.click();
+  42 |             await this.mobileInput.waitFor({ state: 'visible', timeout: 10000 });
+  43 |         }
+  44 |         //await expect(this.page.signInSignUpHeader).toBeVisible();
+  45 |         await this.mobileInput.click();
+  46 |         console.log('Clicked Mobile Input field');
+  47 |         await this.mobileInput.click();
+  48 |         await this.mobileInput.fill(mobile);
+  49 |         await expect(this.getOtpBtn).toBeVisible();
+  50 |         await this.getOtpBtn.click();
+  51 |         await expect(this.otpSentText).toBeVisible();
+  52 |         await expect(this.otpInput).toBeVisible();
+  53 |         await this.otpInput.click();
+  54 |         await this.otpInput.fill(otp);
+  55 |         await this.nextBtn.click();
+  56 |         await this.page.waitForLoadState('networkidle');
+  57 |         await expect(this.signUpBtn).toBeHidden({
+  58 |             timeout: 60000,
+  59 |         });
+  60 |         console.log('Current URL:', this.page.url());
+  61 |         console.log('Title:', await this.page.title());
+  62 |         await this.page.screenshot({
+  63 |             path: 'after-next.png',
+  64 |             fullPage: true,
+  65 |         });
+  66 |     }
+  67 | 
+  68 |     async selectProductAndBuy() {
+  69 |         await this.page.goto('p/oneplus-nord-buds-2r-true-wireless-in-ear-earbuds-with-mic-12-4mm-drivers-playback-upto-38hr-case-4-mic-design-ip55-rating-deep-grey-truly-wireless-earphones-tws-on-emi?source=home',
+  70 |             {
+  71 |                 waitUntil: 'domcontentloaded',
+  72 |             }
+  73 |         );
+  74 | 
+  75 |         const emiText = this.page.getByText(/Pay only .* now/i);
+  76 |         if (await emiText.isVisible()) {
+  77 |             await emiText.click();
+  78 |         }
+  79 |         await this.productEmiOption.click();
+  80 |         await this.buyEmiBtn.click();
+  81 | 
+  82 |         // Handle size dropdown if visible
+  83 |         if (await this.sizeDropdown.isVisible()) {
+  84 |             await this.sizeDropdown.click();
+  85 |             await this.sizeOption.click();
+  86 |             await this.page.locator('html').click();
+  87 |             await this.buyEmiBtn.click();
+  88 |         }
+  89 |     }
+  90 | }
+  91 | 
+```

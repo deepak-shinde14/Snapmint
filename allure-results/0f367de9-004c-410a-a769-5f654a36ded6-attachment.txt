@@ -1,0 +1,14 @@
+Current State: OTP
+URL: https://pay.qa.snmt.link/otp?cv2=true&merchant_id=1616&message=Success&mobile=9285402870&status=Success&token=BzbogJmPvBV7cQJxFVs5&cartId=257085&cartToken=BzbogJmPvBV7cQJxFVs5&merchantId=1616&eId=257085&showLimits=true&showElbHeader=true&showPlanHeader=true&showFooter=true&redirectUrl=%2F&replace=true
+Entering OTP...
+Next button not visible. Skipping proceed.
+Current State: PERSONAL_DETAILS
+URL: https://pay.qa.snmt.link/profile?cv2=true&merchant_id=1616&message=Success&mobile=9285402870&status=Success&token=BzbogJmPvBV7cQJxFVs5&cartId=257085&cartToken=BzbogJmPvBV7cQJxFVs5&merchantId=1616&eId=257085&showLimits=true&showElbHeader=true&showPlanHeader=true&showFooter=true&replace=true&cid=019fe122-eeab-7609-a5c0-74895fa92647&id=019fe122-eeab-7609-a5c0-74895fa92647
+Filling Personal Details...
+Gender selection skipped.
+DOB selection skipped.
+Current State: UNKNOWN
+URL: https://accounts.digitallocker.gov.in/oauth_partner/register/%252Foauth2%252F1%252Fconsent%253Flogo%253D%2526ui_locales%253D%2526response_type%253Dcode%2526client_id%253D276AA65E%2526state%253DAE3577E8A68147F59232FDFA10810384%2526redirect_uri%253Dhttps%25253A%25252F%25252Fin.staging.decentro.tech%25252Fv2%25252Fkyc%25252Fdigilocker%25252Fdigilocker-code%2526orgid%253D004541%2526txn%253D6a7713376ed0coauth21786188599%2526hashkey%253D84fa15860d599dca2dd310b0daee43a91d86e684a9a4d2dc273d643f550f3d53%2526requst_pdf%253DY%2526app_name%253DRGVjZW50cm8gV2ViIERldg%25253D%25253D%2526req_doctype%253DADHAR%25252CPANCR%2526signup%253Dsignup
+Unknown state
+https://accounts.digitallocker.gov.in/oauth_partner/register/%252Foauth2%252F1%252Fconsent%253Flogo%253D%2526ui_locales%253D%2526response_type%253Dcode%2526client_id%253D276AA65E%2526state%253DAE3577E8A68147F59232FDFA10810384%2526redirect_uri%253Dhttps%25253A%25252F%25252Fin.staging.decentro.tech%25252Fv2%25252Fkyc%25252Fdigilocker%25252Fdigilocker-code%2526orgid%253D004541%2526txn%253D6a7713376ed0coauth21786188599%2526hashkey%253D84fa15860d599dca2dd310b0daee43a91d86e684a9a4d2dc273d643f550f3d53%2526requst_pdf%253DY%2526app_name%253DRGVjZW50cm8gV2ViIERldg%25253D%25253D%2526req_doctype%253DADHAR%25252CPANCR%2526signup%253Dsignup
+{ otp: false, pan: false, digilocker: false, confirm: false }

@@ -1,0 +1,7 @@
+Clicked Sign Up button
+Clicked Mobile Input field
+Current URL: https://website.qa.snmt.link/
+Title: home test title
+[SELF-HEAL] Locator #1 failed for Address Line 1
+[SELF-HEAL] Locator #2 failed for Address Line 1
+[SELF-HEAL] Locator #3 failed for Address Line 1

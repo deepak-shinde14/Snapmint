@@ -1,0 +1,15 @@
+Clicked Sign Up button
+Clicked Mobile Input field
+Current URL: https://website.qa.snmt.link/
+Title: home test title
+[SELF-HEAL] Address Line 1 found using locator #1
+[SELF-HEAL] Address Line 2 found using locator #1
+[SELF-HEAL] Landmark found using locator #1
+[SELF-HEAL] Pin Code found using locator #1
+[SELF-HEAL] Locator #1 failed for undefined
+[SELF-HEAL] undefined found using locator #2
+[SELF-HEAL] Deliver to this address button found using locator #1
+Gender selection skipped.
+DOB selection skipped.
+Next button not visible. Skipping proceed.
+Digilocker skipped.

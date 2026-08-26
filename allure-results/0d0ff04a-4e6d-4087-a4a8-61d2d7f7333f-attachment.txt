@@ -1,0 +1,5 @@
+Current State: UNKNOWN
+URL: https://pay.qa.snmt.link/?cv2=true&id=259067&merchant_id=1616&message=Success&mobile=9195865388&status=Success&token=pvHp3js_KSc8v_7CEkQx
+Unknown state
+https://pay.qa.snmt.link/?cv2=true&id=259067&merchant_id=1616&message=Success&mobile=9195865388&status=Success&token=pvHp3js_KSc8v_7CEkQx
+{ otp: false, pan: false, digilocker: false, confirm: false }
