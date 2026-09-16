@@ -1,0 +1,8 @@
+# Playwright
+playwright-profile/
+playwright-report/
+test-results/
+
+# Allure
+allure-results/
+allure-report/

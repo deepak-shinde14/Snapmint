@@ -1,11 +1,25 @@
 {
-  "mobile": "9195865388",
-  "merchantId": "1616",
-  "orderId": "1435675",
+  "mobile": "9635472574",
+  "merchantId": "2302",
+  "storeId": "134985896",
+  "orderId": "129384983",
   "orderValue": "200",
-  "fullName": "Test User",
-  "email": "qa1786861935384@snapmint.com",
-  "pan": "QGLPN2298T",
+  "shippingFees": "100",
+  "fullName": "TEST TEST",
+  "email": "qa1789533858629@snapmint.com",
+  "pan": "SWYPZ1269D",
   "websiteOtp": "1010",
-  "merchantDemoOtp": "1234"
+  "merchantDemoOtp": "1010",
+  "addressLine1": "Gajanan nagar",
+  "addressLine2": "ulhasnagar",
+  "pincode": "421004",
+  "gender": "Male",
+  "dob": {
+    "day": "5",
+    "month": "May",
+    "year": "2002"
+  },
+  "bank": "HDFB",
+  "payuUsername": "payu",
+  "payuPassword": "payu"
 }

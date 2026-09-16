@@ -1,19 +1,21 @@
 export class KycPage {
 
     constructor(page) {
-
         this.page = page;
-        this.otpField = page.getByText(/Enter OTP sent to/i);
-        this.otpInput = page.getByRole('textbox');
-        this.panField = page.locator('#pan');
+        this.otpField = page.getByRole('textbox', { name: /Enter OTP/i }).or(page.getByText(/Enter OTP/i)).first();
+        this.otpInput = page.getByRole('textbox', { name: /Enter OTP/i }).or(page.getByRole('textbox')).first();
+        this.panField = page.locator('#pan, input[name="pan"]').or(page.getByPlaceholder(' ')).first();
+        this.genderRadio = page.getByRole('radio', { name: /Male/i });
         this.nextBtn = page.getByRole('button', { name: 'Next' });
+        this.verifyCreditBtn = page.getByRole('button', { name: /Verify Credit Eligibility|Verify/i });
         this.goToDigilockerBtn = page.getByRole('button', { name: /Go to DigiLocker|Proceed to DigiLocker/i });
         this.successBtn = page.getByRole('button', { name: /Success/i });
     }
 
     async enterOtp(otp) {
-        const isOtpVisible = await this.otpField
-            .isVisible({ timeout: 5000 })
+        const input = this.page.getByRole('textbox', { name: /Enter OTP/i }).or(this.otpInput).first();
+        const isOtpVisible = await input
+            .isVisible({ timeout: 10000 })
             .catch(() => false);
 
         if (!isOtpVisible) {
@@ -21,14 +23,28 @@ export class KycPage {
             return false;
         }
 
-        await this.otpInput.fill(otp);
+        await input.click();
+        await input.fill(otp);
+
+        // If "Verify Credit Eligibility" button becomes enabled, click it
+        const verifyBtn = this.verifyCreditBtn.first();
+        if (await verifyBtn.isVisible({ timeout: 2000 }).catch(() => false)) {
+            await this.page.waitForTimeout(500);
+            if (await verifyBtn.isEnabled({ timeout: 3000 }).catch(() => false)) {
+                await verifyBtn.click().catch(() => {});
+            }
+        }
         return true;
     }
 
-    async enterPan(pan) {
-        await this.panField.waitFor({ state: 'visible' });
-        await this.panField.pressSequentially(pan, { delay: 50 });
-        await this.nextBtn.click();
+    async enterPan(pan, clickNext = false) {
+        const panInput = this.page.getByPlaceholder(' ').or(this.page.locator('#pan')).or(this.page.locator('input[name="pan"]')).first();
+        await panInput.waitFor({ state: 'visible', timeout: 30000 });
+        await panInput.click();
+        await panInput.fill(pan);
+        if (clickNext) {
+            await this.nextBtn.click();
+        }
     }
 
     async selectGender(gender = 'Male') {
@@ -141,17 +157,113 @@ export class KycPage {
         console.log('Digilocker completed.');
     }
 
-    async proceed() {
+    async selectMerchantDob(day = '5', month = 'May', year = '2002') {
+        const daySelect = this.page.locator('#rc_select_0');
+        if (!(await daySelect.isVisible({ timeout: 5000 }).catch(() => false))) {
+            console.log('Merchant DOB select dropdown not visible, trying fallback...');
+            return await this.selectDob();
+        }
 
-        const isNextBtnVisible = await this.nextBtn
+        // 1. Day
+        await daySelect.click();
+        const dayOption = this.page.getByTitle(String(day)).or(this.page.locator('.ant-select-item-option', { hasText: new RegExp(`^${day}$`) }));
+        await dayOption.first().click();
+
+        // 2. Month
+        const monthSelect = this.page.locator('#rc_select_1');
+        await monthSelect.click();
+        const monthOption = this.page.getByTitle(month).or(this.page.locator('.ant-select-item-option', { hasText: month }));
+        await monthOption.first().click();
+
+        // 3. Year
+        const yearSelect = this.page.locator('#rc_select_2');
+        await yearSelect.click();
+        const yearOption = this.page.getByTitle(String(year)).or(this.page.locator('.ant-select-item-option', { hasText: new RegExp(`^${year}$`) }));
+
+        try {
+            await yearOption.first().scrollIntoViewIfNeeded({ timeout: 2000 });
+            await yearOption.first().click({ timeout: 2000 });
+        } catch {
+            const intermediate = this.page.getByText('2004');
+            if (await intermediate.first().isVisible().catch(() => false)) {
+                await intermediate.first().click().catch(() => {});
+            }
+            await yearOption.first().scrollIntoViewIfNeeded({ timeout: 3000 }).catch(() => {});
+            await yearOption.first().click();
+        }
+
+        console.log(`Merchant DOB selected: ${day}-${month}-${year}`);
+    }
+
+    async fillPersonalDetails({ pan, gender = 'Male', dob = { day: '5', month: 'May', year: '2002' } }) {
+        if (pan) {
+            await this.enterPan(pan, false);
+        }
+
+        await this.selectGender(gender);
+
+        if (dob) {
+            await this.selectMerchantDob(dob.day, dob.month, dob.year);
+        }
+
+        await this.proceed();
+    }
+
+    async handleDigilocker() {
+        await this.goToDigilockerBtn.first().waitFor({ state: 'visible', timeout: 30000 });
+        await this.goToDigilockerBtn.first().click();
+
+        await this.successBtn.first().waitFor({
+            state: 'visible',
+            timeout: 30000,
+        });
+
+        await this.successBtn.first().click();
+        console.log('Digilocker success clicked, waiting for KYC completion/redirect...');
+
+        // Wait for page to navigate away from /kyc or reach /dp
+        await this.page.waitForURL((url) => !url.href.includes('/kyc') || url.href.includes('/dp'), {
+            timeout: 60000,
+        }).catch(() => {});
+
+        // Wait for loading backdrop overlay to clear if present
+        await this.page.locator('.backdrop-blur-\\[20px\\]').waitFor({ state: 'hidden', timeout: 15000 }).catch(() => {});
+
+        console.log('Digilocker completed. Current URL:', this.page.url());
+    }
+
+    async isPersonalDetailsVisible() {
+        const url = this.page.url();
+        if (url.includes('/dp') || url.includes('/otp') || url.includes('/address') || url.includes('/kyc')) {
+            return false;
+        }
+
+        if (url.includes('/profile')) {
+            return true;
+        }
+
+        return (
+            await this.genderRadio.first().isVisible().catch(() => false) ||
+            await this.page.locator('#rc_select_0').isVisible().catch(() => false)
+        );
+    }
+
+    async proceed() {
+        const button = this.page.getByRole('button', { name: /Next|Verify Credit Eligibility|Verify|Proceed|Submit/i }).first();
+
+        const isVisible = await button
             .isVisible({ timeout: 5000 })
             .catch(() => false);
 
-        if (!isNextBtnVisible) {
-            console.log('Next button not visible. Skipping proceed.');
+        if (!isVisible) {
+            console.log('Next/Proceed button not visible. Skipping proceed.');
             return false;
         }
-        await this.nextBtn.click();
-        return true;
+
+        if (await button.isEnabled({ timeout: 3000 }).catch(() => false)) {
+            await button.click().catch(() => {});
+            return true;
+        }
+        return false;
     }
 }

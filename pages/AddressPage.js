@@ -4,6 +4,28 @@ import { findWorkingLocator } from '../utils/locatorHelper.js';
 export class AddressPage {
     constructor(page) {
         this.page = page;
+
+        this.addressLine1 = page.locator('#addressLine1');
+        this.addressLine2 = page.locator('#addressLine2');
+        this.pincode = page.locator('#pincode');
+        this.deliverBtn = page.getByRole('button', { name: /Deliver to this address/i });
+    }
+
+    async fillMerchantAddress(line1, line2, pin) {
+        await this.addressLine1.waitFor({ state: 'visible', timeout: 30000 });
+        await this.addressLine1.click();
+        await this.addressLine1.fill(line1);
+
+        await this.addressLine2.click();
+        await this.addressLine2.fill(line2);
+
+        await this.pincode.click();
+        await this.pincode.fill(pin);
+
+        await expect(this.deliverBtn).toBeVisible({ timeout: 10000 });
+        await this.deliverBtn.click();
+
+        await expect(this.deliverBtn).toBeHidden({ timeout: 15000 }).catch(() => {});
     }
 
     async fillAddress(line1, line2, landmark, pin) {

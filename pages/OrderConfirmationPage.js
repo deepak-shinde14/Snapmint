@@ -22,4 +22,9 @@ export class OrderConfirmationPage {
         await expect(this.page.getByText(/Payment Received/i)).toBeVisible({ timeout: 60000 });
         await expect(this.page.getByText(/Payment id/i).first()).toBeVisible({ timeout: 60000 });
     }
+
+    async verifyMerchantSuccess() {
+        await this.page.waitForURL(/.*success.*/, { timeout: 60000 });
+        await expect(this.page).toHaveURL(/.*success.*/);
+    }
 }

@@ -21,6 +21,18 @@ export class PaymentPage {
         this.confirmOrderBtn = page.getByRole('button', {
             name: 'Confirm Order',
         });
+
+        // Net Banking and PayU simulator flow
+        this.selectPaymentMethodAccordion = page.getByText(/Select Payment Method/i);
+        this.netBankingOption = page.getByText('Net Banking', { exact: true }).or(page.getByText(/Net Banking/i));
+        this.bankHdfc = page.getByRole('img', { name: /HDFB/i }).or(page.getByText(/HDFB|HDFC/i));
+        this.termsCheckbox = page.getByLabel('').or(page.getByRole('checkbox')).or(page.locator('input[type="checkbox"]'));
+        this.payBtn = page.getByRole('button', { name: /Pay ₹|Pay/i });
+
+        this.payuUsernameInput = page.getByRole('textbox', { name: /Enter payu as username/i }).or(page.locator('input[name="username"]'));
+        this.payuPasswordInput = page.getByRole('textbox', { name: /Enter payu as password/i }).or(page.locator('input[name="password"]'));
+        this.payuSubmitBtn = page.getByRole('button', { name: /Submit/i });
+        this.payuSimulateSuccessBtn = page.getByRole('button', { name: /Simulate Success Response/i });
     }
 
     async continueCheckout(upiId = '999999999@upi') {
@@ -56,6 +68,16 @@ export class PaymentPage {
             return;
         }
 
+        // ----------------------------
+        // Merchant Flow
+        // Net Banking -> PayU Simulator
+        // ----------------------------
+        if (await this.netBankingOption.isVisible().catch(() => false) || this.page.url().includes('/dp')) {
+            console.log('Merchant Net Banking checkout flow detected.');
+            await this.handleMerchantPayment();
+            return;
+        }
+
         throw new Error('Unable to determine checkout flow.');
     }
 
@@ -81,5 +103,58 @@ export class PaymentPage {
             .click();
 
         await popup.getByRole('button', { name: 'GOT IT' }).click();
+    }
+
+    async payViaNetBanking({ bank = 'HDFB' } = {}) {
+        await this.page.waitForLoadState('domcontentloaded');
+
+        // Only click accordion if Net Banking option is not visible yet
+        if (!(await this.netBankingOption.first().isVisible().catch(() => false))) {
+            if (await this.selectPaymentMethodAccordion.first().isVisible({ timeout: 5000 }).catch(() => false)) {
+                await this.selectPaymentMethodAccordion.first().click().catch(() => {});
+            }
+        }
+
+        // Click Net Banking
+        await this.netBankingOption.first().waitFor({ state: 'visible', timeout: 30000 });
+        await this.netBankingOption.first().click();
+
+        // Select Bank (e.g. HDFB)
+        const bankLocator = bank === 'HDFB'
+            ? this.bankHdfc.first()
+            : this.page.getByRole('img', { name: new RegExp(bank, 'i') }).or(this.page.getByText(bank)).first();
+        await bankLocator.waitFor({ state: 'visible', timeout: 15000 });
+        await bankLocator.click();
+
+        // Accept terms checkbox if present
+        const checkbox = this.termsCheckbox.first();
+        if (await checkbox.isVisible({ timeout: 5000 }).catch(() => false)) {
+            await checkbox.check();
+        }
+
+        // Click Pay button
+        await this.payBtn.first().waitFor({ state: 'visible', timeout: 15000 });
+        await this.payBtn.first().click();
+    }
+
+    async completePayUSimulation({ username = 'payu', password = 'payu' } = {}) {
+        // Wait for PayU simulation username field
+        await this.payuUsernameInput.first().waitFor({ state: 'visible', timeout: 30000 });
+        await this.payuUsernameInput.first().click();
+        await this.payuUsernameInput.first().fill(username);
+
+        await this.payuPasswordInput.first().click();
+        await this.payuPasswordInput.first().fill(password);
+
+        await this.payuSubmitBtn.first().click();
+
+        // Wait for Simulate Success Response button
+        await this.payuSimulateSuccessBtn.first().waitFor({ state: 'visible', timeout: 30000 });
+        await this.payuSimulateSuccessBtn.first().click();
+    }
+
+    async handleMerchantPayment({ bank = 'HDFB', username = 'payu', password = 'payu' } = {}) {
+        await this.payViaNetBanking({ bank });
+        await this.completePayUSimulation({ username, password });
     }
 }
